@@ -16,7 +16,7 @@ namespace PHANMEMTHI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Do_Test());
+            Application.Run(new Login());
         }
     }
 }

@@ -113,7 +113,9 @@ namespace PHANMEMTHI
                 int result2 = DateTime.Compare(curtdate, enddate);
                 if (result1 < 0 || result2 < 0)
                 {
-                    MessageBox.Show("Co the vao thi");
+                    this.Hide();
+                    Do_Test dtest = new Do_Test(msv, examid);
+                    dtest.Show();
                 }
                 else
                 {

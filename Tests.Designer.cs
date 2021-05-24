@@ -330,6 +330,8 @@ namespace PHANMEMTHI
             // 
             // testinfo
             // 
+            this.testinfo.AllowUserToAddRows = false;
+            this.testinfo.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.testinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.testinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -358,6 +360,7 @@ namespace PHANMEMTHI
             this.testinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.testinfo.Location = new System.Drawing.Point(406, 141);
             this.testinfo.Name = "testinfo";
+            this.testinfo.ReadOnly = true;
             this.testinfo.RowHeadersVisible = false;
             this.testinfo.RowHeadersWidth = 51;
             this.testinfo.RowTemplate.Height = 24;
@@ -378,7 +381,7 @@ namespace PHANMEMTHI
             this.testinfo.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.testinfo.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.testinfo.ThemeStyle.HeaderStyle.Height = 30;
-            this.testinfo.ThemeStyle.ReadOnly = false;
+            this.testinfo.ThemeStyle.ReadOnly = true;
             this.testinfo.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.testinfo.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.testinfo.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
