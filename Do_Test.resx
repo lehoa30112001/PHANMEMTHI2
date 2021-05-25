@@ -141,7 +141,7 @@
         UXPWmENNWvV7TtWdkYeHP0qIQUQl2W6lAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="guna2ImageButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="nextpage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAD0AAAA+CAYAAACY9hNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAX
         EQAAFxEByibzPwAABP1JREFUaEPVW+1VGzEQdAn5GeAPJaQESqCElJAS0kFK8MMNmFRACedU4BIOKiA7
@@ -168,7 +168,7 @@
         amG8Bqjh4p3wBTNVXxYJ2Bz8PXzJFDkNj/oR3e3+A0vF1x7XhIUJAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="guna2ImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="backpage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAD4AAAA+CAYAAABzwahEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAX
         EQAAFxEByibzPwAABOZJREFUaEPVW+1R4zAQTQn8POAPJVACJVwJlEAJ1wElZC4NmKuAEpSrwCUIKuD2

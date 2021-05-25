@@ -45,18 +45,15 @@ namespace PHANMEMTHI
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnext = new System.Windows.Forms.Button();
+            this.btback = new System.Windows.Forms.Button();
             this.lbquestion = new System.Windows.Forms.Label();
             this.causo = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.answer4 = new System.Windows.Forms.RadioButton();
-            this.answer3 = new System.Windows.Forms.RadioButton();
-            this.answer2 = new System.Windows.Forms.RadioButton();
-            this.answer1 = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.page = new System.Windows.Forms.Label();
+            this.nextpage = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.backpage = new Guna.UI2.WinForms.Guna2ImageButton();
             this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
@@ -77,14 +74,15 @@ namespace PHANMEMTHI
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btsubmit = new System.Windows.Forms.Button();
-            this.Button1 = new System.Windows.Forms.Button();
-            this.btback = new System.Windows.Forms.Button();
-            this.btnext = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.answer1 = new System.Windows.Forms.RadioButton();
+            this.answer2 = new System.Windows.Forms.RadioButton();
+            this.answer3 = new System.Windows.Forms.RadioButton();
+            this.answer4 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
+            this.Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -258,17 +256,46 @@ namespace PHANMEMTHI
             this.guna2Panel1.BorderRadius = 30;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.guna2Panel1.BorderThickness = 3;
+            this.guna2Panel1.Controls.Add(this.answer4);
+            this.guna2Panel1.Controls.Add(this.answer3);
+            this.guna2Panel1.Controls.Add(this.answer2);
+            this.guna2Panel1.Controls.Add(this.answer1);
             this.guna2Panel1.Controls.Add(this.btnext);
             this.guna2Panel1.Controls.Add(this.btback);
             this.guna2Panel1.Controls.Add(this.lbquestion);
             this.guna2Panel1.Controls.Add(this.causo);
-            this.guna2Panel1.Controls.Add(this.groupBox1);
             this.guna2Panel1.Controls.Add(this.label11);
             this.guna2Panel1.Location = new System.Drawing.Point(13, 132);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(718, 480);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // btnext
+            // 
+            this.btnext.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnext.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnext.ForeColor = System.Drawing.Color.White;
+            this.btnext.Location = new System.Drawing.Point(496, 423);
+            this.btnext.Name = "btnext";
+            this.btnext.Size = new System.Drawing.Size(143, 44);
+            this.btnext.TabIndex = 10;
+            this.btnext.Text = "Câu tiếp";
+            this.btnext.UseVisualStyleBackColor = false;
+            this.btnext.Click += new System.EventHandler(this.btnext_Click);
+            // 
+            // btback
+            // 
+            this.btback.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btback.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btback.ForeColor = System.Drawing.Color.White;
+            this.btback.Location = new System.Drawing.Point(93, 423);
+            this.btback.Name = "btback";
+            this.btback.Size = new System.Drawing.Size(140, 44);
+            this.btback.TabIndex = 9;
+            this.btback.Text = "Câu trước";
+            this.btback.UseVisualStyleBackColor = false;
+            this.btback.Click += new System.EventHandler(this.btback_Click);
             // 
             // lbquestion
             // 
@@ -292,75 +319,6 @@ namespace PHANMEMTHI
             this.causo.TabIndex = 7;
             this.causo.Text = "Câu số: ";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.answer4);
-            this.groupBox1.Controls.Add(this.answer3);
-            this.groupBox1.Controls.Add(this.answer2);
-            this.groupBox1.Controls.Add(this.answer1);
-            this.groupBox1.Location = new System.Drawing.Point(46, 104);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(642, 298);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            // 
-            // answer4
-            // 
-            this.answer4.AutoSize = true;
-            this.answer4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answer4.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.answer4.Location = new System.Drawing.Point(32, 216);
-            this.answer4.Name = "answer4";
-            this.answer4.Size = new System.Drawing.Size(128, 25);
-            this.answer4.TabIndex = 3;
-            this.answer4.TabStop = true;
-            this.answer4.Text = "radioButton4";
-            this.answer4.UseVisualStyleBackColor = true;
-            this.answer4.CheckedChanged += new System.EventHandler(this.answer1_CheckedChanged);
-            // 
-            // answer3
-            // 
-            this.answer3.AutoSize = true;
-            this.answer3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answer3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.answer3.Location = new System.Drawing.Point(32, 151);
-            this.answer3.Name = "answer3";
-            this.answer3.Size = new System.Drawing.Size(128, 25);
-            this.answer3.TabIndex = 2;
-            this.answer3.TabStop = true;
-            this.answer3.Text = "radioButton3";
-            this.answer3.UseVisualStyleBackColor = true;
-            this.answer3.CheckedChanged += new System.EventHandler(this.answer1_CheckedChanged);
-            // 
-            // answer2
-            // 
-            this.answer2.AutoSize = true;
-            this.answer2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answer2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.answer2.Location = new System.Drawing.Point(32, 86);
-            this.answer2.Name = "answer2";
-            this.answer2.Size = new System.Drawing.Size(128, 25);
-            this.answer2.TabIndex = 1;
-            this.answer2.TabStop = true;
-            this.answer2.Text = "radioButton2";
-            this.answer2.UseVisualStyleBackColor = true;
-            this.answer2.CheckedChanged += new System.EventHandler(this.answer1_CheckedChanged);
-            // 
-            // answer1
-            // 
-            this.answer1.AutoSize = true;
-            this.answer1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answer1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.answer1.Location = new System.Drawing.Point(32, 21);
-            this.answer1.Name = "answer1";
-            this.answer1.Size = new System.Drawing.Size(128, 25);
-            this.answer1.TabIndex = 0;
-            this.answer1.TabStop = true;
-            this.answer1.Text = "radioButton1";
-            this.answer1.UseVisualStyleBackColor = true;
-            this.answer1.CheckedChanged += new System.EventHandler(this.answer1_CheckedChanged);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -372,88 +330,90 @@ namespace PHANMEMTHI
             this.label11.TabIndex = 5;
             this.label11.Text = "Thời gian còn lại";
             // 
-            // guna2Panel2
+            // Panel2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.guna2Panel2.BorderRadius = 30;
-            this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.guna2Panel2.BorderThickness = 3;
-            this.guna2Panel2.Controls.Add(this.label8);
-            this.guna2Panel2.Controls.Add(this.guna2ImageButton2);
-            this.guna2Panel2.Controls.Add(this.guna2ImageButton1);
-            this.guna2Panel2.Controls.Add(this.button20);
-            this.guna2Panel2.Controls.Add(this.button19);
-            this.guna2Panel2.Controls.Add(this.button18);
-            this.guna2Panel2.Controls.Add(this.button17);
-            this.guna2Panel2.Controls.Add(this.button16);
-            this.guna2Panel2.Controls.Add(this.button15);
-            this.guna2Panel2.Controls.Add(this.button14);
-            this.guna2Panel2.Controls.Add(this.button13);
-            this.guna2Panel2.Controls.Add(this.button12);
-            this.guna2Panel2.Controls.Add(this.button11);
-            this.guna2Panel2.Controls.Add(this.button10);
-            this.guna2Panel2.Controls.Add(this.button9);
-            this.guna2Panel2.Controls.Add(this.button8);
-            this.guna2Panel2.Controls.Add(this.button7);
-            this.guna2Panel2.Controls.Add(this.button6);
-            this.guna2Panel2.Controls.Add(this.button5);
-            this.guna2Panel2.Controls.Add(this.button4);
-            this.guna2Panel2.Controls.Add(this.button3);
-            this.guna2Panel2.Controls.Add(this.button2);
-            this.guna2Panel2.Controls.Add(this.btsubmit);
-            this.guna2Panel2.Controls.Add(this.Button1);
-            this.guna2Panel2.Location = new System.Drawing.Point(755, 132);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(325, 480);
-            this.guna2Panel2.TabIndex = 2;
+            this.Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.Panel2.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.Panel2.BorderRadius = 30;
+            this.Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.Panel2.BorderThickness = 3;
+            this.Panel2.Controls.Add(this.page);
+            this.Panel2.Controls.Add(this.nextpage);
+            this.Panel2.Controls.Add(this.backpage);
+            this.Panel2.Controls.Add(this.button20);
+            this.Panel2.Controls.Add(this.button19);
+            this.Panel2.Controls.Add(this.button18);
+            this.Panel2.Controls.Add(this.button17);
+            this.Panel2.Controls.Add(this.button16);
+            this.Panel2.Controls.Add(this.button15);
+            this.Panel2.Controls.Add(this.button14);
+            this.Panel2.Controls.Add(this.button13);
+            this.Panel2.Controls.Add(this.button12);
+            this.Panel2.Controls.Add(this.button11);
+            this.Panel2.Controls.Add(this.button10);
+            this.Panel2.Controls.Add(this.button9);
+            this.Panel2.Controls.Add(this.button8);
+            this.Panel2.Controls.Add(this.button7);
+            this.Panel2.Controls.Add(this.button6);
+            this.Panel2.Controls.Add(this.button5);
+            this.Panel2.Controls.Add(this.button4);
+            this.Panel2.Controls.Add(this.button3);
+            this.Panel2.Controls.Add(this.button2);
+            this.Panel2.Controls.Add(this.btsubmit);
+            this.Panel2.Controls.Add(this.button1);
+            this.Panel2.Location = new System.Drawing.Point(755, 132);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.ShadowDecoration.Parent = this.Panel2;
+            this.Panel2.Size = new System.Drawing.Size(325, 480);
+            this.Panel2.TabIndex = 2;
             // 
-            // label8
+            // page
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.label8.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label8.Location = new System.Drawing.Point(142, 246);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 29);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "1/3";
+            this.page.AutoSize = true;
+            this.page.Font = new System.Drawing.Font("Times New Roman", 15F);
+            this.page.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.page.Location = new System.Drawing.Point(142, 280);
+            this.page.Name = "page";
+            this.page.Size = new System.Drawing.Size(44, 29);
+            this.page.TabIndex = 9;
+            this.page.Text = "1/3";
             // 
-            // guna2ImageButton2
+            // nextpage
             // 
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(232, 237);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Size = new System.Drawing.Size(50, 43);
-            this.guna2ImageButton2.TabIndex = 26;
+            this.nextpage.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.nextpage.CheckedState.Parent = this.nextpage;
+            this.nextpage.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.nextpage.HoverState.Parent = this.nextpage;
+            this.nextpage.Image = ((System.Drawing.Image)(resources.GetObject("nextpage.Image")));
+            this.nextpage.ImageRotate = 0F;
+            this.nextpage.ImageSize = new System.Drawing.Size(35, 35);
+            this.nextpage.Location = new System.Drawing.Point(232, 271);
+            this.nextpage.Name = "nextpage";
+            this.nextpage.PressedState.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
+            this.nextpage.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.nextpage.PressedState.Parent = this.nextpage;
+            this.nextpage.Size = new System.Drawing.Size(50, 43);
+            this.nextpage.TabIndex = 26;
+            this.nextpage.Click += new System.EventHandler(this.nextpage_Click);
             // 
-            // guna2ImageButton1
+            // backpage
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Enabled = false;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(37, 237);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(50, 43);
-            this.guna2ImageButton1.TabIndex = 25;
+            this.backpage.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.backpage.CheckedState.Parent = this.backpage;
+            this.backpage.Enabled = false;
+            this.backpage.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.backpage.HoverState.Parent = this.backpage;
+            this.backpage.Image = ((System.Drawing.Image)(resources.GetObject("backpage.Image")));
+            this.backpage.ImageRotate = 0F;
+            this.backpage.ImageSize = new System.Drawing.Size(35, 35);
+            this.backpage.Location = new System.Drawing.Point(37, 271);
+            this.backpage.Name = "backpage";
+            this.backpage.PressedState.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
+            this.backpage.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.backpage.PressedState.Parent = this.backpage;
+            this.backpage.Size = new System.Drawing.Size(50, 43);
+            this.backpage.TabIndex = 25;
+            this.backpage.Click += new System.EventHandler(this.backpage_Click);
             // 
             // button20
             // 
@@ -461,12 +421,13 @@ namespace PHANMEMTHI
             this.button20.BackColor = System.Drawing.Color.White;
             this.button20.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button20.Location = new System.Drawing.Point(256, 163);
+            this.button20.Location = new System.Drawing.Point(254, 190);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(40, 40);
             this.button20.TabIndex = 24;
             this.button20.Text = "20";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Visible = false;
             this.button20.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button19
@@ -475,12 +436,13 @@ namespace PHANMEMTHI
             this.button19.BackColor = System.Drawing.Color.White;
             this.button19.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button19.Location = new System.Drawing.Point(199, 164);
+            this.button19.Location = new System.Drawing.Point(197, 191);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(40, 40);
             this.button19.TabIndex = 23;
             this.button19.Text = "19";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Visible = false;
             this.button19.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button18
@@ -489,12 +451,13 @@ namespace PHANMEMTHI
             this.button18.BackColor = System.Drawing.Color.White;
             this.button18.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button18.Location = new System.Drawing.Point(142, 164);
+            this.button18.Location = new System.Drawing.Point(140, 191);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(40, 40);
             this.button18.TabIndex = 22;
             this.button18.Text = "18";
             this.button18.UseVisualStyleBackColor = false;
+            this.button18.Visible = false;
             this.button18.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button17
@@ -503,12 +466,13 @@ namespace PHANMEMTHI
             this.button17.BackColor = System.Drawing.Color.White;
             this.button17.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button17.Location = new System.Drawing.Point(85, 163);
+            this.button17.Location = new System.Drawing.Point(83, 190);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(40, 40);
             this.button17.TabIndex = 21;
             this.button17.Text = "17";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Visible = false;
             this.button17.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button16
@@ -517,12 +481,13 @@ namespace PHANMEMTHI
             this.button16.BackColor = System.Drawing.Color.White;
             this.button16.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button16.Location = new System.Drawing.Point(28, 163);
+            this.button16.Location = new System.Drawing.Point(26, 190);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(40, 40);
             this.button16.TabIndex = 20;
             this.button16.Text = "16";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Visible = false;
             this.button16.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button15
@@ -531,12 +496,13 @@ namespace PHANMEMTHI
             this.button15.BackColor = System.Drawing.Color.White;
             this.button15.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button15.Location = new System.Drawing.Point(256, 113);
+            this.button15.Location = new System.Drawing.Point(254, 140);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(40, 40);
             this.button15.TabIndex = 19;
             this.button15.Text = "15";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Visible = false;
             this.button15.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button14
@@ -545,12 +511,13 @@ namespace PHANMEMTHI
             this.button14.BackColor = System.Drawing.Color.White;
             this.button14.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button14.Location = new System.Drawing.Point(199, 114);
+            this.button14.Location = new System.Drawing.Point(197, 141);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(40, 40);
             this.button14.TabIndex = 18;
             this.button14.Text = "14";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Visible = false;
             this.button14.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button13
@@ -559,12 +526,13 @@ namespace PHANMEMTHI
             this.button13.BackColor = System.Drawing.Color.White;
             this.button13.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button13.Location = new System.Drawing.Point(142, 114);
+            this.button13.Location = new System.Drawing.Point(140, 141);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(40, 40);
             this.button13.TabIndex = 17;
             this.button13.Text = "13";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Visible = false;
             this.button13.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button12
@@ -573,12 +541,13 @@ namespace PHANMEMTHI
             this.button12.BackColor = System.Drawing.Color.White;
             this.button12.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button12.Location = new System.Drawing.Point(85, 113);
+            this.button12.Location = new System.Drawing.Point(83, 140);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(40, 40);
             this.button12.TabIndex = 16;
             this.button12.Text = "12";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Visible = false;
             this.button12.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button11
@@ -587,12 +556,13 @@ namespace PHANMEMTHI
             this.button11.BackColor = System.Drawing.Color.White;
             this.button11.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button11.Location = new System.Drawing.Point(28, 113);
+            this.button11.Location = new System.Drawing.Point(26, 140);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(40, 40);
             this.button11.TabIndex = 15;
             this.button11.Text = "11";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Visible = false;
             this.button11.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button10
@@ -601,12 +571,13 @@ namespace PHANMEMTHI
             this.button10.BackColor = System.Drawing.Color.White;
             this.button10.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button10.Location = new System.Drawing.Point(256, 63);
+            this.button10.Location = new System.Drawing.Point(254, 90);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(40, 40);
             this.button10.TabIndex = 14;
             this.button10.Text = "10";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Visible = false;
             this.button10.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button9
@@ -615,12 +586,13 @@ namespace PHANMEMTHI
             this.button9.BackColor = System.Drawing.Color.White;
             this.button9.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button9.Location = new System.Drawing.Point(199, 64);
+            this.button9.Location = new System.Drawing.Point(197, 91);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(40, 40);
             this.button9.TabIndex = 13;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Visible = false;
             this.button9.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button8
@@ -629,12 +601,13 @@ namespace PHANMEMTHI
             this.button8.BackColor = System.Drawing.Color.White;
             this.button8.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button8.Location = new System.Drawing.Point(142, 64);
+            this.button8.Location = new System.Drawing.Point(140, 91);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(40, 40);
             this.button8.TabIndex = 12;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Visible = false;
             this.button8.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button7
@@ -643,12 +616,13 @@ namespace PHANMEMTHI
             this.button7.BackColor = System.Drawing.Color.White;
             this.button7.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button7.Location = new System.Drawing.Point(85, 63);
+            this.button7.Location = new System.Drawing.Point(83, 90);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(40, 40);
             this.button7.TabIndex = 11;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Visible = false;
             this.button7.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button6
@@ -657,12 +631,13 @@ namespace PHANMEMTHI
             this.button6.BackColor = System.Drawing.Color.White;
             this.button6.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button6.Location = new System.Drawing.Point(28, 63);
+            this.button6.Location = new System.Drawing.Point(26, 90);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(40, 40);
             this.button6.TabIndex = 10;
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button5
@@ -671,12 +646,13 @@ namespace PHANMEMTHI
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button5.Location = new System.Drawing.Point(256, 13);
+            this.button5.Location = new System.Drawing.Point(254, 40);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(40, 40);
             this.button5.TabIndex = 9;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
             this.button5.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button4
@@ -685,12 +661,13 @@ namespace PHANMEMTHI
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button4.Location = new System.Drawing.Point(199, 14);
+            this.button4.Location = new System.Drawing.Point(197, 41);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(40, 40);
             this.button4.TabIndex = 8;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button3
@@ -699,12 +676,13 @@ namespace PHANMEMTHI
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button3.Location = new System.Drawing.Point(142, 14);
+            this.button3.Location = new System.Drawing.Point(140, 41);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(40, 40);
             this.button3.TabIndex = 7;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
@@ -713,12 +691,13 @@ namespace PHANMEMTHI
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.Location = new System.Drawing.Point(85, 13);
+            this.button2.Location = new System.Drawing.Point(83, 40);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(40, 40);
             this.button2.TabIndex = 6;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btsubmit
@@ -726,59 +705,90 @@ namespace PHANMEMTHI
             this.btsubmit.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btsubmit.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btsubmit.ForeColor = System.Drawing.Color.White;
-            this.btsubmit.Location = new System.Drawing.Point(73, 309);
+            this.btsubmit.Location = new System.Drawing.Point(79, 331);
             this.btsubmit.Name = "btsubmit";
             this.btsubmit.Size = new System.Drawing.Size(177, 44);
             this.btsubmit.TabIndex = 5;
             this.btsubmit.Text = "Nộp bài";
             this.btsubmit.UseVisualStyleBackColor = false;
             // 
-            // Button1
+            // button1
             // 
-            this.Button1.AccessibleName = "";
-            this.Button1.BackColor = System.Drawing.Color.White;
-            this.Button1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.Button1.Location = new System.Drawing.Point(28, 13);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(40, 40);
-            this.Button1.TabIndex = 0;
-            this.Button1.Text = "1";
-            this.Button1.UseVisualStyleBackColor = false;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button1.AccessibleName = "";
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.button1.Location = new System.Drawing.Point(26, 40);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // btback
+            // answer1
             // 
-            this.btback.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btback.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btback.ForeColor = System.Drawing.Color.White;
-            this.btback.Location = new System.Drawing.Point(93, 423);
-            this.btback.Name = "btback";
-            this.btback.Size = new System.Drawing.Size(140, 44);
-            this.btback.TabIndex = 9;
-            this.btback.Text = "Câu trước";
-            this.btback.UseVisualStyleBackColor = false;
-            this.btback.Click += new System.EventHandler(this.btback_Click);
+            this.answer1.AutoSize = true;
+            this.answer1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answer1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.answer1.Location = new System.Drawing.Point(105, 117);
+            this.answer1.Name = "answer1";
+            this.answer1.Size = new System.Drawing.Size(128, 25);
+            this.answer1.TabIndex = 11;
+            this.answer1.TabStop = true;
+            this.answer1.Text = "radioButton1";
+            this.answer1.UseVisualStyleBackColor = true;
+            this.answer1.Click += new System.EventHandler(this.answer1_Click);
             // 
-            // btnext
+            // answer2
             // 
-            this.btnext.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnext.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnext.ForeColor = System.Drawing.Color.White;
-            this.btnext.Location = new System.Drawing.Point(496, 423);
-            this.btnext.Name = "btnext";
-            this.btnext.Size = new System.Drawing.Size(143, 44);
-            this.btnext.TabIndex = 10;
-            this.btnext.Text = "Câu tiếp";
-            this.btnext.UseVisualStyleBackColor = false;
-            this.btnext.Click += new System.EventHandler(this.btnext_Click);
+            this.answer2.AutoSize = true;
+            this.answer2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answer2.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.answer2.Location = new System.Drawing.Point(105, 166);
+            this.answer2.Name = "answer2";
+            this.answer2.Size = new System.Drawing.Size(128, 25);
+            this.answer2.TabIndex = 12;
+            this.answer2.TabStop = true;
+            this.answer2.Text = "radioButton1";
+            this.answer2.UseVisualStyleBackColor = true;
+            this.answer2.Click += new System.EventHandler(this.answer2_Click);
+            // 
+            // answer3
+            // 
+            this.answer3.AutoSize = true;
+            this.answer3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answer3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.answer3.Location = new System.Drawing.Point(105, 214);
+            this.answer3.Name = "answer3";
+            this.answer3.Size = new System.Drawing.Size(128, 25);
+            this.answer3.TabIndex = 13;
+            this.answer3.TabStop = true;
+            this.answer3.Text = "radioButton2";
+            this.answer3.UseVisualStyleBackColor = true;
+            this.answer3.Click += new System.EventHandler(this.answer3_Click);
+            // 
+            // answer4
+            // 
+            this.answer4.AutoSize = true;
+            this.answer4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answer4.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.answer4.Location = new System.Drawing.Point(105, 260);
+            this.answer4.Name = "answer4";
+            this.answer4.Size = new System.Drawing.Size(128, 25);
+            this.answer4.TabIndex = 14;
+            this.answer4.TabStop = true;
+            this.answer4.Text = "radioButton3";
+            this.answer4.UseVisualStyleBackColor = true;
+            this.answer4.Click += new System.EventHandler(this.answer4_Click);
             // 
             // Do_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 624);
-            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.Name = "Do_Test";
@@ -790,10 +800,8 @@ namespace PHANMEMTHI
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
+            this.Panel2.ResumeLayout(false);
+            this.Panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -813,20 +821,14 @@ namespace PHANMEMTHI
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btsubmit;
-        private System.Windows.Forms.Button Button1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbquestion;
         private System.Windows.Forms.Label causo;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton answer4;
-        private System.Windows.Forms.RadioButton answer3;
-        private System.Windows.Forms.RadioButton answer2;
-        private System.Windows.Forms.RadioButton answer1;
-        private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private System.Windows.Forms.Label page;
+        private Guna.UI2.WinForms.Guna2ImageButton nextpage;
+        private Guna.UI2.WinForms.Guna2ImageButton backpage;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button18;
@@ -850,5 +852,10 @@ namespace PHANMEMTHI
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnext;
         private System.Windows.Forms.Button btback;
+        private System.Windows.Forms.RadioButton answer1;
+        private System.Windows.Forms.RadioButton answer4;
+        private System.Windows.Forms.RadioButton answer3;
+        private System.Windows.Forms.RadioButton answer2;
+        private Guna.UI2.WinForms.Guna2Panel Panel2;
     }
 }
