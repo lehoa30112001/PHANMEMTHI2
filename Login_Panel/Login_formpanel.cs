@@ -82,7 +82,7 @@ namespace PHANMEMTHI.Login_Panel
                 sda.Fill(dt);
                 if (dt.Rows.Count == 1)
                 {
-                    this.Hide();
+                    Login.ActiveForm.Hide();
                     Student_Login stlogin = new Student_Login(userbox.Text);                    
                     stlogin.Show();
 

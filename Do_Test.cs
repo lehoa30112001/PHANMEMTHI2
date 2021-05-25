@@ -23,7 +23,7 @@ namespace PHANMEMTHI
         bool[] danhap = new bool[40];
         int[] dapan = new int[40];
         int totalpage;
-        int currentpage; 
+        int currentpage;
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
         public Do_Test(string msv, string examid)
         {
@@ -276,6 +276,18 @@ namespace PHANMEMTHI
             loadpage(currentpage);
         }
 
+        private void btsubmit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Kết thúc bài kiểm tra và lưu kết quả?", "Xác nhận nộp bài", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                MessageBox.Show("Đã lưu kết quả kiểm tra", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                ShowExamResult se = new ShowExamResult(resultid);
+                se.Show();
+            }    
+            
+        }
+
         private void btnext_Click(object sender, EventArgs e)
         {
             
@@ -285,7 +297,6 @@ namespace PHANMEMTHI
             if (currentquestion == numberquestion - 1)
                 btnext.Enabled = false;
         }
-
 
     }
 }

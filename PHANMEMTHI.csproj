@@ -83,6 +83,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowExamResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowExamResult.Designer.cs">
+      <DependentUpon>ShowExamResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ShowExamResult.resx">
+      <DependentUpon>ShowExamResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student_Login.resx">
       <DependentUpon>Student_Login.cs</DependentUpon>
     </EmbeddedResource>
