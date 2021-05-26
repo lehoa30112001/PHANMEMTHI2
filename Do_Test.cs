@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Timers;
 
 namespace PHANMEMTHI
 {
@@ -17,13 +18,15 @@ namespace PHANMEMTHI
         {
             InitializeComponent();
         }
-        int numberquestion;
-        string exid, stuid;
+        int numberquestion, examtime;
+        string exid, stuid, examtype;
         int currentquestion = 0;
-        bool[] danhap = new bool[40];
-        int[] dapan = new int[40];
+        bool[] danhap = new bool[120];
+        int[] dapan = new int[120];
         int totalpage;
         int currentpage;
+        string classname;
+        int h, m, s;
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
         public Do_Test(string msv, string examid)
         {
@@ -31,7 +34,7 @@ namespace PHANMEMTHI
             exid = examid;
             stuid = msv;
             conn.Open();
-            string query = "select * from Students, Classes, Student_Classes, Exams, Subject where Students.Student_id = '" + msv + "' and Exams.Exam_id ='"+examid+"'";
+            string query = "select * from Students, Classes, Student_Classes, Exams, Subject where Students.Student_id = '" + msv + "' and Exams.Exam_id ='" + examid + "'";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -43,18 +46,22 @@ namespace PHANMEMTHI
                 stid.Text = dr["Student_id"].ToString();
                 stname.Text = dr["Student_name"].ToString();
                 exorder.Text = dr["exam_order"].ToString();
+                examtype = dr["exam_order"].ToString();
                 extime.Text = dr["time"].ToString();
+                examtime = Convert.ToInt32(dr["time"].ToString());
                 clname.Text = dr["class_name"].ToString();
+                classname = dr["class_name"].ToString();
             }
             conn.Close();
         }
+        
         DataTable question = new DataTable();
         DataTable answer = new DataTable();
         string resultid;
         string now;
         private void loadquestion(string examid)
         {
-            string query1 = "select Question_id, Question as qt from Question, Exams where Exams.Exam_id = '"+examid+"'";
+            string query1 = "select Question_id, Question as qt from Question, Exams where Exams.Exam_id = '" + examid + "'";
             SqlCommand cmd1 = new SqlCommand(query1, conn);
             SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
             sda1.Fill(question);
@@ -82,7 +89,7 @@ namespace PHANMEMTHI
             }
             else
             {
-                switch(dapan[number])
+                switch (dapan[number])
                 {
                     case 0:
                         answer1.Checked = true;
@@ -98,8 +105,8 @@ namespace PHANMEMTHI
                         break;
                     default:
                         break;
-                }                
-            }                 
+                }
+            }
             answer1.Text = "A." + answer.Rows[0][1].ToString();
             answer2.Text = "B." + answer.Rows[1][1].ToString();
             answer3.Text = "C." + answer.Rows[2][1].ToString();
@@ -117,11 +124,11 @@ namespace PHANMEMTHI
             backpage.Enabled = false;
             question_answer(currentquestion);
 
-            currentpage = 1; 
+            currentpage = 1;
             if (numberquestion % 20 == 0)
             {
                 totalpage = numberquestion / 20;
-            }    
+            }
             else
             {
                 totalpage = numberquestion / 20 + 1;
@@ -130,7 +137,7 @@ namespace PHANMEMTHI
 
             foreach (Control item in Panel2.Controls)
             {
-                int i; 
+                int i;
                 for (i = 1; i <= numberquestion; i++)
                 {
                     string buttonname = "button" + i;
@@ -142,41 +149,47 @@ namespace PHANMEMTHI
                             b.Visible = true;
                         }
                     }
-                }    
+                }
             }
 
             now = DateTime.Now.ToString();
             resultid = "result" + stuid + exid + now;
-            string query = "insert into Student_Exam_Result values ('"+resultid+"', '"+stuid+"', '"+exid+"', 0, '"+DateTime.Now+"', 0)";
+            string query = "insert into Student_Exam_Result values ('" + resultid + "', '" + stuid + "', '" + exid + "', 0, '" + DateTime.Now + "', 0)";
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();
             conn.Close();
-        }
 
+            h = examtime / 60;
+            m = examtime - (h * 60);
+            s = 0;
+            elaptime.Text = h + ":" + m + ":" + s;
+
+            if (numberquestion <= 20)
+                nextpage.Enabled = false;
+        }
         private void Button1_Click(object sender, EventArgs e)
         {
-            Button button = (Button)sender;                       
-            currentquestion =  Convert.ToInt32(button.Text) - 1;  
+            Button button = (Button)sender;
+            currentquestion = Convert.ToInt32(button.Text) - 1;
             question_answer(Convert.ToInt32(button.Text) - 1);
             if (currentquestion == 0)
-                btback.Enabled = false;            
+                btback.Enabled = false;
             else
-                 btback.Enabled = true;            
+                btback.Enabled = true;
             if (currentquestion == numberquestion - 1)
-                btnext.Enabled = false;            
+                btnext.Enabled = false;
             else
-                btnext.Enabled = true;            
+                btnext.Enabled = true;
         }
-
         private void btback_Click(object sender, EventArgs e)
         {
-            currentquestion = currentquestion - 1;
+            currentquestion--;
             btnext.Enabled = true;
             if (currentquestion == 0)
                 btback.Enabled = false;
-            question_answer(currentquestion);            
-        }        
+            question_answer(currentquestion);
+        }
         private void saveanswer(int question0, int answer0)
         {
             foreach (Control item in Panel2.Controls)
@@ -190,10 +203,9 @@ namespace PHANMEMTHI
                         b.BackColor = Color.Red;
                     }
                 }
-            }    
+            }
             string questionidnow = question.Rows[question0][0].ToString();
             string answeridnow = answer.Rows[answer0][0].ToString();
-            string now = DateTime.Now.ToString();
             string choiceid = "choice" + resultid + questionidnow + answer0;
             if (!danhap[question0])
             {
@@ -240,18 +252,56 @@ namespace PHANMEMTHI
             answer4.Checked = true;
             saveanswer(currentquestion, 3);
         }
-        private void loadpage (int number)
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (m < 5)
+                elaptime.ForeColor = Color.Red;
+            elaptime.Text = h + ":" + m + ":" + s;
+            if (s == 0)
+            {
+                if (m == 0)
+                {
+                    if (h == 0)
+                    {
+                        timer1.Enabled = false;
+                        takeaccesstime();
+                        MessageBox.Show("Đã lưu kết quả kiểm tra", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        ShowExamResult se = new ShowExamResult(resultid, stname.Text, classname, examtype, numberquestion, stuid, exid);
+                        se.Show();
+                    }
+                    else
+                    {
+                        m = 59;
+                        h--;
+                    }
+                }
+                else
+                {
+                    s = 59;
+                    m--;
+                }
+
+            }
+            else s--;            
+        }
+
+        private void loadpage(int number)
         {
             foreach (Control item in Panel2.Controls)
             {
                 int i;
-                for (i=1; i<=20; i++)
+                for (i = 1; i <= 20; i++)
                 {
                     string buttonname = "button" + i;
                     if (item.Name == buttonname)
                     {
                         Button b = item as Button;
-                        b.Text = ((number - 1) * 20 + i).ToString(); 
+                        b.Text = ((number - 1) * 20 + i).ToString();
+                        if (danhap[Convert.ToInt32(b.Text.ToString()) - 1]  == false)
+                            b.BackColor = Color.White;
+                        else b.BackColor = Color.Red;
                     }
                 }
                 page.Text = number + "/" + totalpage;
@@ -260,13 +310,12 @@ namespace PHANMEMTHI
 
         private void backpage_Click(object sender, EventArgs e)
         {
-            currentpage = currentpage - 1; 
+            currentpage--;
             nextpage.Enabled = true;
             if (currentpage == 1)
                 backpage.Enabled = false;
             loadpage(currentpage);
         }
-
         private void nextpage_Click(object sender, EventArgs e)
         {
             currentpage = currentpage + 1;
@@ -275,14 +324,15 @@ namespace PHANMEMTHI
                 nextpage.Enabled = false;
             loadpage(currentpage);
         }
-
         private void btsubmit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Kết thúc bài kiểm tra và lưu kết quả?", "Xác nhận nộp bài", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
+                timer1.Enabled = false;
+                takeaccesstime();
                 MessageBox.Show("Đã lưu kết quả kiểm tra", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                ShowExamResult se = new ShowExamResult(resultid);
+                ShowExamResult se = new ShowExamResult(resultid, stname.Text, classname, examtype, numberquestion, stuid, exid);
                 se.Show();
             }    
             
@@ -297,6 +347,16 @@ namespace PHANMEMTHI
             if (currentquestion == numberquestion - 1)
                 btnext.Enabled = false;
         }
-
+        private void takeaccesstime()
+        {
+            int elap = h * 3600 + m * 60 + s;
+            int access = examtime * 60;
+            int second = access - elap;
+            string query = "update Student_Exam_Result set Access_time = '" + second + "' where Result_id = '" + resultid + "'";
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

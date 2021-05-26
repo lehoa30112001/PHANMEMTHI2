@@ -347,13 +347,13 @@ namespace PHANMEMTHI
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.testinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.testinfo.ColumnHeadersHeight = 30;
+            this.testinfo.ColumnHeadersHeight = 35;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.testinfo.DefaultCellStyle = dataGridViewCellStyle3;
             this.testinfo.EnableHeadersVisualStyles = false;
@@ -380,15 +380,15 @@ namespace PHANMEMTHI
             this.testinfo.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testinfo.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.testinfo.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.testinfo.ThemeStyle.HeaderStyle.Height = 30;
+            this.testinfo.ThemeStyle.HeaderStyle.Height = 35;
             this.testinfo.ThemeStyle.ReadOnly = true;
             this.testinfo.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.testinfo.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.testinfo.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testinfo.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.testinfo.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.testinfo.ThemeStyle.RowsStyle.Height = 24;
-            this.testinfo.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.testinfo.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.testinfo.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.testinfo.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.testinfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.testinfo_CellContentClick);
             // 
             // lbnumber

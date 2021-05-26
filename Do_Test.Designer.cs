@@ -29,6 +29,7 @@ namespace PHANMEMTHI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Do_Test));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbnumber = new System.Windows.Forms.Label();
@@ -53,7 +54,7 @@ namespace PHANMEMTHI
             this.btback = new System.Windows.Forms.Button();
             this.lbquestion = new System.Windows.Forms.Label();
             this.causo = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.elaptime = new System.Windows.Forms.Label();
             this.Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.page = new System.Windows.Forms.Label();
             this.nextpage = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -79,6 +80,7 @@ namespace PHANMEMTHI
             this.button2 = new System.Windows.Forms.Button();
             this.btsubmit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -111,11 +113,11 @@ namespace PHANMEMTHI
             this.lbnumber.AutoSize = true;
             this.lbnumber.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnumber.ForeColor = System.Drawing.Color.White;
-            this.lbnumber.Location = new System.Drawing.Point(972, 69);
+            this.lbnumber.Location = new System.Drawing.Point(866, 69);
             this.lbnumber.Name = "lbnumber";
-            this.lbnumber.Size = new System.Drawing.Size(34, 25);
+            this.lbnumber.Size = new System.Drawing.Size(71, 25);
             this.lbnumber.TabIndex = 12;
-            this.lbnumber.Text = "40";
+            this.lbnumber.Text = "40 câu";
             // 
             // label9
             // 
@@ -124,16 +126,16 @@ namespace PHANMEMTHI
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(792, 69);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(174, 25);
+            this.label9.Size = new System.Drawing.Size(68, 25);
             this.label9.TabIndex = 11;
-            this.label9.Text = "Tổng số câu hỏi: ";
+            this.label9.Text = "Tổng:";
             // 
             // extime
             // 
             this.extime.AutoSize = true;
             this.extime.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.extime.ForeColor = System.Drawing.Color.White;
-            this.extime.Location = new System.Drawing.Point(989, 30);
+            this.extime.Location = new System.Drawing.Point(980, 30);
             this.extime.Name = "extime";
             this.extime.Size = new System.Drawing.Size(79, 25);
             this.extime.TabIndex = 10;
@@ -144,7 +146,7 @@ namespace PHANMEMTHI
             this.clname.AutoSize = true;
             this.clname.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clname.ForeColor = System.Drawing.Color.White;
-            this.clname.Location = new System.Drawing.Point(519, 70);
+            this.clname.Location = new System.Drawing.Point(504, 69);
             this.clname.Name = "clname";
             this.clname.Size = new System.Drawing.Size(138, 25);
             this.clname.TabIndex = 9;
@@ -155,7 +157,7 @@ namespace PHANMEMTHI
             this.exorder.AutoSize = true;
             this.exorder.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exorder.ForeColor = System.Drawing.Color.White;
-            this.exorder.Location = new System.Drawing.Point(586, 28);
+            this.exorder.Location = new System.Drawing.Point(574, 30);
             this.exorder.Name = "exorder";
             this.exorder.Size = new System.Drawing.Size(138, 25);
             this.exorder.TabIndex = 8;
@@ -166,7 +168,7 @@ namespace PHANMEMTHI
             this.stid.AutoSize = true;
             this.stid.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stid.ForeColor = System.Drawing.Color.White;
-            this.stid.Location = new System.Drawing.Point(200, 69);
+            this.stid.Location = new System.Drawing.Point(180, 70);
             this.stid.Name = "stid";
             this.stid.Size = new System.Drawing.Size(138, 25);
             this.stid.TabIndex = 7;
@@ -177,7 +179,7 @@ namespace PHANMEMTHI
             this.stname.AutoSize = true;
             this.stname.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stname.ForeColor = System.Drawing.Color.White;
-            this.stname.Location = new System.Drawing.Point(214, 32);
+            this.stname.Location = new System.Drawing.Point(200, 31);
             this.stname.Name = "stname";
             this.stname.Size = new System.Drawing.Size(138, 25);
             this.stname.TabIndex = 6;
@@ -264,7 +266,7 @@ namespace PHANMEMTHI
             this.guna2Panel1.Controls.Add(this.btback);
             this.guna2Panel1.Controls.Add(this.lbquestion);
             this.guna2Panel1.Controls.Add(this.causo);
-            this.guna2Panel1.Controls.Add(this.label11);
+            this.guna2Panel1.Controls.Add(this.elaptime);
             this.guna2Panel1.Location = new System.Drawing.Point(13, 132);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
@@ -276,7 +278,7 @@ namespace PHANMEMTHI
             this.answer4.AutoSize = true;
             this.answer4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer4.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.answer4.Location = new System.Drawing.Point(105, 260);
+            this.answer4.Location = new System.Drawing.Point(105, 289);
             this.answer4.Name = "answer4";
             this.answer4.Size = new System.Drawing.Size(128, 25);
             this.answer4.TabIndex = 14;
@@ -290,7 +292,7 @@ namespace PHANMEMTHI
             this.answer3.AutoSize = true;
             this.answer3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.answer3.Location = new System.Drawing.Point(105, 214);
+            this.answer3.Location = new System.Drawing.Point(105, 233);
             this.answer3.Name = "answer3";
             this.answer3.Size = new System.Drawing.Size(128, 25);
             this.answer3.TabIndex = 13;
@@ -304,7 +306,7 @@ namespace PHANMEMTHI
             this.answer2.AutoSize = true;
             this.answer2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.answer2.Location = new System.Drawing.Point(105, 166);
+            this.answer2.Location = new System.Drawing.Point(105, 177);
             this.answer2.Name = "answer2";
             this.answer2.Size = new System.Drawing.Size(128, 25);
             this.answer2.TabIndex = 12;
@@ -358,7 +360,7 @@ namespace PHANMEMTHI
             this.lbquestion.AutoSize = true;
             this.lbquestion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbquestion.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbquestion.Location = new System.Drawing.Point(126, 61);
+            this.lbquestion.Location = new System.Drawing.Point(126, 63);
             this.lbquestion.Name = "lbquestion";
             this.lbquestion.Size = new System.Drawing.Size(71, 22);
             this.lbquestion.TabIndex = 8;
@@ -375,16 +377,16 @@ namespace PHANMEMTHI
             this.causo.TabIndex = 7;
             this.causo.Text = "Câu số: ";
             // 
-            // label11
+            // elaptime
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(554, 26);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 17);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Thời gian còn lại";
+            this.elaptime.AutoSize = true;
+            this.elaptime.Font = new System.Drawing.Font("Times New Roman", 14F);
+            this.elaptime.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.elaptime.Location = new System.Drawing.Point(596, 20);
+            this.elaptime.Name = "elaptime";
+            this.elaptime.Size = new System.Drawing.Size(84, 27);
+            this.elaptime.TabIndex = 5;
+            this.elaptime.Text = "0:30:30";
             // 
             // Panel2
             // 
@@ -784,6 +786,12 @@ namespace PHANMEMTHI
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Do_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -822,7 +830,7 @@ namespace PHANMEMTHI
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label elaptime;
         private System.Windows.Forms.Button btsubmit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbquestion;
@@ -858,5 +866,6 @@ namespace PHANMEMTHI
         private System.Windows.Forms.RadioButton answer3;
         private System.Windows.Forms.RadioButton answer2;
         private Guna.UI2.WinForms.Guna2Panel Panel2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
