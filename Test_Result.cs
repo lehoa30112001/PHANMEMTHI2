@@ -64,5 +64,17 @@ namespace PHANMEMTHI
                 lbteacher.Visible = true;
             }
         }
+
+        private void Chonlop_Click(object sender, EventArgs e)
+        {
+            if (lbteacher.Visible == false)
+                MessageBox.Show("Chon lop hoc !!");
+            else
+            {
+                this.Hide();
+                Class_Exam_Info ce = new Class_Exam_Info(classid, studentid.Text, studentname.Text, studentbirthday.Text);
+                ce.Show();
+            }            
+        }
     }
 }

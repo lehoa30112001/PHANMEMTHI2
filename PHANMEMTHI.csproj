@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class_Exam_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class_Exam_Info.Designer.cs">
+      <DependentUpon>Class_Exam_Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Do_Test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,7 +95,6 @@
     <Compile Include="ShowExamResult.Designer.cs">
       <DependentUpon>ShowExamResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sinhvien.cs" />
     <Compile Include="Student_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +113,9 @@
     <Compile Include="Test_Result.Designer.cs">
       <DependentUpon>Test_Result.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Class_Exam_Info.resx">
+      <DependentUpon>Class_Exam_Info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Do_Test.resx">
       <DependentUpon>Do_Test.cs</DependentUpon>
     </EmbeddedResource>

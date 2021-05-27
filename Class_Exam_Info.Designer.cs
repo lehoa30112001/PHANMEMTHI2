@@ -1,7 +1,7 @@
 ﻿
 namespace PHANMEMTHI
 {
-    partial class Test_Result
+    partial class Class_Exam_Info
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@ namespace PHANMEMTHI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test_Result));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Class_Exam_Info));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.hombut = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -44,20 +44,10 @@ namespace PHANMEMTHI
             this.studentid = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.Chitiet = new Guna.UI2.WinForms.Guna2Button();
+            this.backbt = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lbsubject = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbclass = new System.Windows.Forms.Label();
-            this.lbteacher = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lbcredit = new System.Windows.Forms.Label();
             this.classinfo = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Chonlop = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hombut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -77,10 +67,10 @@ namespace PHANMEMTHI
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.studentid);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Location = new System.Drawing.Point(-4, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1101, 101);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 2;
             // 
             // label1
             // 
@@ -195,203 +185,98 @@ namespace PHANMEMTHI
             this.guna2Panel1.BorderColor = System.Drawing.Color.CornflowerBlue;
             this.guna2Panel1.BorderRadius = 25;
             this.guna2Panel1.BorderThickness = 3;
-            this.guna2Panel1.Controls.Add(this.Chonlop);
-            this.guna2Panel1.Controls.Add(this.classinfo);
-            this.guna2Panel1.Controls.Add(this.label12);
+            this.guna2Panel1.Controls.Add(this.Chitiet);
+            this.guna2Panel1.Controls.Add(this.backbt);
             this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.label15);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.label13);
-            this.guna2Panel1.Controls.Add(this.lbsubject);
-            this.guna2Panel1.Controls.Add(this.label14);
-            this.guna2Panel1.Controls.Add(this.label5);
-            this.guna2Panel1.Controls.Add(this.lbclass);
-            this.guna2Panel1.Controls.Add(this.lbteacher);
-            this.guna2Panel1.Controls.Add(this.label10);
-            this.guna2Panel1.Controls.Add(this.lbcredit);
+            this.guna2Panel1.Controls.Add(this.classinfo);
             this.guna2Panel1.Location = new System.Drawing.Point(17, 128);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(1062, 480);
-            this.guna2Panel1.TabIndex = 44;
+            this.guna2Panel1.TabIndex = 45;
             // 
-            // label12
+            // Chitiet
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label12.Location = new System.Drawing.Point(652, 146);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(189, 26);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Tên lớp học phần";
+            this.Chitiet.BorderRadius = 15;
+            this.Chitiet.CheckedState.Parent = this.Chitiet;
+            this.Chitiet.CustomImages.Parent = this.Chitiet;
+            this.Chitiet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chitiet.ForeColor = System.Drawing.Color.White;
+            this.Chitiet.HoverState.Parent = this.Chitiet;
+            this.Chitiet.Location = new System.Drawing.Point(656, 389);
+            this.Chitiet.Name = "Chitiet";
+            this.Chitiet.ShadowDecoration.Parent = this.Chitiet;
+            this.Chitiet.Size = new System.Drawing.Size(180, 45);
+            this.Chitiet.TabIndex = 61;
+            this.Chitiet.Text = "Chi tiết";
+            this.Chitiet.Click += new System.EventHandler(this.Chitiet_Click);
+            // 
+            // backbt
+            // 
+            this.backbt.BorderRadius = 15;
+            this.backbt.CheckedState.Parent = this.backbt;
+            this.backbt.CustomImages.Parent = this.backbt;
+            this.backbt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbt.ForeColor = System.Drawing.Color.White;
+            this.backbt.HoverState.Parent = this.backbt;
+            this.backbt.Location = new System.Drawing.Point(235, 389);
+            this.backbt.Name = "backbt";
+            this.backbt.ShadowDecoration.Parent = this.backbt;
+            this.backbt.Size = new System.Drawing.Size(180, 45);
+            this.backbt.TabIndex = 60;
+            this.backbt.Text = "Quay về";
+            this.backbt.Click += new System.EventHandler(this.backbt_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label3.Location = new System.Drawing.Point(145, 29);
+            this.label3.Location = new System.Drawing.Point(327, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(344, 26);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "DANH SÁCH LỚP HỌC PHẦN";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label15.Location = new System.Drawing.Point(655, 375);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 22);
-            this.label15.TabIndex = 41;
-            this.label15.Text = "Môn";
-            this.label15.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(650, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 26);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Môn học";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label13.Location = new System.Drawing.Point(655, 337);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 22);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "Môn";
-            this.label13.Visible = false;
-            // 
-            // lbsubject
-            // 
-            this.lbsubject.AutoSize = true;
-            this.lbsubject.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbsubject.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbsubject.Location = new System.Drawing.Point(653, 112);
-            this.lbsubject.Name = "lbsubject";
-            this.lbsubject.Size = new System.Drawing.Size(46, 22);
-            this.lbsubject.TabIndex = 31;
-            this.lbsubject.Text = "Môn";
-            this.lbsubject.Visible = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label14.Location = new System.Drawing.Point(652, 299);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(185, 26);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Thông tin liên hệ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label5.Location = new System.Drawing.Point(650, 221);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(215, 26);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Giáo viên phụ trách";
-            // 
-            // lbclass
-            // 
-            this.lbclass.AutoSize = true;
-            this.lbclass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbclass.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbclass.Location = new System.Drawing.Point(655, 184);
-            this.lbclass.Name = "lbclass";
-            this.lbclass.Size = new System.Drawing.Size(46, 22);
-            this.lbclass.TabIndex = 38;
-            this.lbclass.Text = "Môn";
-            this.lbclass.Visible = false;
-            // 
-            // lbteacher
-            // 
-            this.lbteacher.AutoSize = true;
-            this.lbteacher.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbteacher.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbteacher.Location = new System.Drawing.Point(653, 259);
-            this.lbteacher.Name = "lbteacher";
-            this.lbteacher.Size = new System.Drawing.Size(46, 22);
-            this.lbteacher.TabIndex = 34;
-            this.lbteacher.Text = "Môn";
-            this.lbteacher.Visible = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label10.Location = new System.Drawing.Point(922, 74);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 26);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "Số tín chỉ";
-            // 
-            // lbcredit
-            // 
-            this.lbcredit.AutoSize = true;
-            this.lbcredit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbcredit.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbcredit.Location = new System.Drawing.Point(924, 112);
-            this.lbcredit.Name = "lbcredit";
-            this.lbcredit.Size = new System.Drawing.Size(46, 22);
-            this.lbcredit.TabIndex = 36;
-            this.lbcredit.Text = "Môn";
-            this.lbcredit.Visible = false;
+            this.label3.Size = new System.Drawing.Size(398, 26);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "KẾT QUẢ BÀI KIỂM TRA ĐÃ LÀM";
             // 
             // classinfo
             // 
             this.classinfo.AllowUserToAddRows = false;
             this.classinfo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.classinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.classinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.classinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.classinfo.BackgroundColor = System.Drawing.Color.White;
             this.classinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.classinfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.classinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.classinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.classinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.classinfo.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.classinfo.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.classinfo.DefaultCellStyle = dataGridViewCellStyle3;
             this.classinfo.EnableHeadersVisualStyles = false;
             this.classinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.classinfo.Location = new System.Drawing.Point(24, 71);
+            this.classinfo.Location = new System.Drawing.Point(43, 95);
             this.classinfo.Name = "classinfo";
             this.classinfo.ReadOnly = true;
             this.classinfo.RowHeadersVisible = false;
             this.classinfo.RowHeadersWidth = 51;
             this.classinfo.RowTemplate.Height = 24;
             this.classinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.classinfo.Size = new System.Drawing.Size(602, 387);
-            this.classinfo.TabIndex = 42;
+            this.classinfo.Size = new System.Drawing.Size(987, 239);
+            this.classinfo.TabIndex = 58;
             this.classinfo.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.classinfo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.classinfo.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -416,33 +301,16 @@ namespace PHANMEMTHI
             this.classinfo.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.classinfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.classinfo_CellContentClick);
             // 
-            // Chonlop
-            // 
-            this.Chonlop.BorderRadius = 15;
-            this.Chonlop.CheckedState.Parent = this.Chonlop;
-            this.Chonlop.CustomImages.Parent = this.Chonlop;
-            this.Chonlop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chonlop.ForeColor = System.Drawing.Color.White;
-            this.Chonlop.HoverState.Parent = this.Chonlop;
-            this.Chonlop.Location = new System.Drawing.Point(798, 413);
-            this.Chonlop.Name = "Chonlop";
-            this.Chonlop.ShadowDecoration.Parent = this.Chonlop;
-            this.Chonlop.Size = new System.Drawing.Size(180, 45);
-            this.Chonlop.TabIndex = 43;
-            this.Chonlop.Text = "Chọn lớp";
-            this.Chonlop.Click += new System.EventHandler(this.Chonlop_Click);
-            // 
-            // Test_Result
+            // Class_Exam_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 624);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
-            this.Name = "Test_Result";
+            this.Name = "Class_Exam_Info";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Test_Result";
-            this.Load += new System.EventHandler(this.Test_Result_Load);
+            this.Text = "Class_Exam_Info";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hombut)).EndInit();
@@ -467,19 +335,9 @@ namespace PHANMEMTHI
         private System.Windows.Forms.Label studentid;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2Button Chitiet;
+        private Guna.UI2.WinForms.Guna2Button backbt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lbsubject;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lbclass;
-        private System.Windows.Forms.Label lbteacher;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lbcredit;
         private Guna.UI2.WinForms.Guna2DataGridView classinfo;
-        private Guna.UI2.WinForms.Guna2Button Chonlop;
     }
 }

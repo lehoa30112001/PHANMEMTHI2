@@ -154,7 +154,7 @@ namespace PHANMEMTHI
 
             now = DateTime.Now.ToString();
             resultid = "result" + stuid + exid + now;
-            string query = "insert into Student_Exam_Result values ('" + resultid + "', '" + stuid + "', '" + exid + "', 0, '" + DateTime.Now + "', 0)";
+            string query = "insert into Student_Exam_Result values ('" + resultid + "', '" + stuid + "', '" + exid + "', 0, '" + DateTime.Now + "', 0, 0)";
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();
