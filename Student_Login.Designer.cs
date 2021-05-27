@@ -200,6 +200,7 @@ namespace PHANMEMTHI
             this.testresult.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.testresult.TabIndex = 28;
             this.testresult.TabStop = false;
+            this.testresult.Click += new System.EventHandler(this.testresult_Click);
             // 
             // lbdotest
             // 
@@ -225,6 +226,7 @@ namespace PHANMEMTHI
             this.label12.Size = new System.Drawing.Size(103, 23);
             this.label12.TabIndex = 31;
             this.label12.Text = "Kết quả thi";
+            this.label12.Click += new System.EventHandler(this.testresult_Click);
             // 
             // Student_Login
             // 

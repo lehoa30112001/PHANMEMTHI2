@@ -97,7 +97,6 @@ namespace PHANMEMTHI
                 lbnumber.Visible = true;
             }    
             conn.Close();
-
         }
 
         private void vaothi_Click(object sender, EventArgs e)

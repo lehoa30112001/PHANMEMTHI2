@@ -59,6 +59,7 @@ namespace PHANMEMTHI
             this.lbnumber = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.vaothi = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hombut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -358,14 +359,14 @@ namespace PHANMEMTHI
             this.testinfo.DefaultCellStyle = dataGridViewCellStyle3;
             this.testinfo.EnableHeadersVisualStyles = false;
             this.testinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.testinfo.Location = new System.Drawing.Point(406, 141);
+            this.testinfo.Location = new System.Drawing.Point(397, 179);
             this.testinfo.Name = "testinfo";
             this.testinfo.ReadOnly = true;
             this.testinfo.RowHeadersVisible = false;
             this.testinfo.RowHeadersWidth = 51;
             this.testinfo.RowTemplate.Height = 24;
             this.testinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.testinfo.Size = new System.Drawing.Size(673, 423);
+            this.testinfo.Size = new System.Drawing.Size(682, 385);
             this.testinfo.TabIndex = 13;
             this.testinfo.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.testinfo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -427,11 +428,23 @@ namespace PHANMEMTHI
             this.vaothi.UseVisualStyleBackColor = false;
             this.vaothi.Click += new System.EventHandler(this.vaothi_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label3.Location = new System.Drawing.Point(578, 125);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(335, 26);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "DANH SÁCH BÀI KIỂM TRA ";
+            // 
             // Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 624);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.vaothi);
             this.Controls.Add(this.lbnumber);
             this.Controls.Add(this.label18);
@@ -491,5 +504,6 @@ namespace PHANMEMTHI
         private System.Windows.Forms.Label lbnumber;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button vaothi;
+        private System.Windows.Forms.Label label3;
     }
 }

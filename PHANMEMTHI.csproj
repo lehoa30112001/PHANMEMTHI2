@@ -89,6 +89,7 @@
     <Compile Include="ShowExamResult.Designer.cs">
       <DependentUpon>ShowExamResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sinhvien.cs" />
     <Compile Include="Student_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +101,12 @@
     </Compile>
     <Compile Include="Tests.Designer.cs">
       <DependentUpon>Tests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test_Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test_Result.Designer.cs">
+      <DependentUpon>Test_Result.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Do_Test.resx">
       <DependentUpon>Do_Test.cs</DependentUpon>
@@ -131,6 +138,9 @@
     <EmbeddedResource Include="Tests.resx">
       <DependentUpon>Tests.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Test_Result.resx">
+      <DependentUpon>Test_Result.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="phanmemthiDataSet.xsc">
       <DependentUpon>phanmemthiDataSet.xsd</DependentUpon>
@@ -156,5 +166,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

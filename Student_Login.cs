@@ -17,7 +17,7 @@ namespace PHANMEMTHI
         {
             InitializeComponent();
         }
-        string msv; 
+        string msv, hoten, ngaysinh; 
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
         public Student_Login(string stuser)
         {
@@ -31,12 +31,22 @@ namespace PHANMEMTHI
             foreach (DataRow dr in dt2.Rows)
             {
                 studentid.Text = dr["Student_id"].ToString();
-                studentname.Text = dr["Student_name"].ToString();
+                hoten = dr["Student_name"].ToString();
+                studentname.Text = hoten;
                 string s = dr["Birthday"].ToString();
                 string[] d = s.Split('/');
                 studentbirthday.Text = d[0] + '/' + d[1]+ '/' + d[2].Substring(0,4);
+                ngaysinh = studentbirthday.Text;
             }
         }
+
+        private void testresult_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Test_Result tr = new Test_Result(msv, hoten, ngaysinh);
+            tr.Show();
+        }
+
         private void logoutbutton_Click(object sender, EventArgs e)
         {
             this.Hide();
