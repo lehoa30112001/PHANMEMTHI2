@@ -48,6 +48,7 @@ namespace PHANMEMTHI
             this.resulttb = new Guna.UI2.WinForms.Guna2DataGridView();
             this.redobutton = new Guna.UI2.WinForms.Guna2Button();
             this.homebutton = new Guna.UI2.WinForms.Guna2Button();
+            this.backbutton = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resulttb)).BeginInit();
@@ -256,13 +257,13 @@ namespace PHANMEMTHI
             // 
             // redobutton
             // 
-            this.redobutton.BorderRadius = 25;
+            this.redobutton.BorderRadius = 20;
             this.redobutton.CheckedState.Parent = this.redobutton;
             this.redobutton.CustomImages.Parent = this.redobutton;
             this.redobutton.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.redobutton.ForeColor = System.Drawing.Color.White;
             this.redobutton.HoverState.Parent = this.redobutton;
-            this.redobutton.Location = new System.Drawing.Point(274, 552);
+            this.redobutton.Location = new System.Drawing.Point(195, 557);
             this.redobutton.Name = "redobutton";
             this.redobutton.ShadowDecoration.Parent = this.redobutton;
             this.redobutton.Size = new System.Drawing.Size(180, 45);
@@ -272,13 +273,13 @@ namespace PHANMEMTHI
             // 
             // homebutton
             // 
-            this.homebutton.BorderRadius = 25;
+            this.homebutton.BorderRadius = 20;
             this.homebutton.CheckedState.Parent = this.homebutton;
             this.homebutton.CustomImages.Parent = this.homebutton;
             this.homebutton.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homebutton.ForeColor = System.Drawing.Color.White;
             this.homebutton.HoverState.Parent = this.homebutton;
-            this.homebutton.Location = new System.Drawing.Point(638, 552);
+            this.homebutton.Location = new System.Drawing.Point(476, 557);
             this.homebutton.Name = "homebutton";
             this.homebutton.ShadowDecoration.Parent = this.homebutton;
             this.homebutton.Size = new System.Drawing.Size(180, 45);
@@ -286,11 +287,28 @@ namespace PHANMEMTHI
             this.homebutton.Text = "Trang chủ";
             this.homebutton.Click += new System.EventHandler(this.homebutton_Click);
             // 
+            // backbutton
+            // 
+            this.backbutton.BorderRadius = 20;
+            this.backbutton.CheckedState.Parent = this.backbutton;
+            this.backbutton.CustomImages.Parent = this.backbutton;
+            this.backbutton.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbutton.ForeColor = System.Drawing.Color.White;
+            this.backbutton.HoverState.Parent = this.backbutton;
+            this.backbutton.Location = new System.Drawing.Point(742, 557);
+            this.backbutton.Name = "backbutton";
+            this.backbutton.ShadowDecoration.Parent = this.backbutton;
+            this.backbutton.Size = new System.Drawing.Size(180, 45);
+            this.backbutton.TabIndex = 5;
+            this.backbutton.Text = "Quay về";
+            this.backbutton.Click += new System.EventHandler(this.backbutton_Click);
+            // 
             // ShowExamResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 624);
+            this.Controls.Add(this.backbutton);
             this.Controls.Add(this.homebutton);
             this.Controls.Add(this.redobutton);
             this.Controls.Add(this.resulttb);
@@ -324,5 +342,6 @@ namespace PHANMEMTHI
         private Guna.UI2.WinForms.Guna2DataGridView resulttb;
         private Guna.UI2.WinForms.Guna2Button redobutton;
         private Guna.UI2.WinForms.Guna2Button homebutton;
+        private Guna.UI2.WinForms.Guna2Button backbutton;
     }
 }

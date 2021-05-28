@@ -270,7 +270,7 @@ namespace PHANMEMTHI
                         takeaccesstime();
                         MessageBox.Show("Đã lưu kết quả kiểm tra", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
-                        ShowExamResult se = new ShowExamResult(resultid, stname.Text, classname, examtype, numberquestion, stuid, exid);
+                        ShowExamResult se = new ShowExamResult(resultid, stname.Text, classname, examtype, numberquestion, stuid, exid, "dotest");
                         se.Show();
                     }
                     else
@@ -334,7 +334,7 @@ namespace PHANMEMTHI
                 takeaccesstime();
                 MessageBox.Show("Đã lưu kết quả kiểm tra", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                ShowExamResult se = new ShowExamResult(resultid, stname.Text, classname, examtype, numberquestion, stuid, exid);
+                ShowExamResult se = new ShowExamResult(resultid, stname.Text, classname, examtype, numberquestion, stuid, exid, "dotest");
                 se.Show();
             }    
             

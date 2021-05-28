@@ -51,7 +51,7 @@ namespace PHANMEMTHI
         private void Chitiet_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ShowExamResult se = new ShowExamResult(resultid, studentname.Text, classname, examtype, numberquestion, studentid.Text, examid);
+            ShowExamResult se = new ShowExamResult(resultid, studentname.Text, classname, examtype, numberquestion, studentid.Text, examid, "examinfo");
             se.Show();
         }
 

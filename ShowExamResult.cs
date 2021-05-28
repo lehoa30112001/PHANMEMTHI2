@@ -23,10 +23,13 @@ namespace PHANMEMTHI
         string examid;
         DateTime startdate, enddate;
         int limited, lanthi;
+        string huongve;
+        string class_id, birthday; 
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
-        public ShowExamResult(string examresultid, string studentname, string classname, string examtype, int questionnumber, string stuid, string exam)
+        public ShowExamResult(string examresultid, string studentname, string classname, string examtype, int questionnumber, string stuid, string exam, string direct)
         {
             examid = exam;
+            huongve = direct; 
             studentid = stuid;
             InitializeComponent();
             conn.Open();
@@ -76,6 +79,44 @@ namespace PHANMEMTHI
         private void ShowExamResult_Load(object sender, EventArgs e)
         {
             loaddata();
+        }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            string query = "Select Class_id from Exams where Exam_id = '" + examid + "'";
+            string query2 = "select Birthday from Students where Student_id = '" + studentid + "'"; 
+            conn.Open();
+            SqlCommand cmd2 = new SqlCommand(query, conn);
+            SqlDataAdapter sda1 = new SqlDataAdapter(cmd2);
+            DataTable dt4 = new DataTable();
+            sda1.Fill(dt4);
+            SqlCommand cmd = new SqlCommand(query2, conn);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            conn.Close();
+            foreach (DataRow dr in dt4.Rows)
+            {
+                class_id = dr[0].ToString();
+            }
+            foreach (DataRow dr in dt.Rows)
+            {
+                string s = dr[0].ToString();
+                string[] d = s.Split('/');
+                birthday = d[0] + '/' + d[1] + '/' + d[2].Substring(0, 4);
+            }
+            if (huongve == "dotest")
+            {
+                this.Close();
+                Tests te = new Tests(studentid);
+                te.Show();
+            }    
+            else if (huongve == "examinfo")
+            {
+                this.Close();
+                Class_Exam_Info ce = new Class_Exam_Info(class_id, studentid, stname.Text, birthday);
+                ce.Show();
+            }
         }
 
         private void homebutton_Click(object sender, EventArgs e)
