@@ -27,10 +27,12 @@ namespace PHANMEMTHI
         int currentpage;
         string classname;
         int h, m, s;
+        int times; 
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
-        public Do_Test(string msv, string examid)
+        public Do_Test(string msv, string examid, int lanthi)
         {
             InitializeComponent();
+            times = lanthi; 
             exid = examid;
             stuid = msv;
             conn.Open();
@@ -154,7 +156,7 @@ namespace PHANMEMTHI
 
             now = DateTime.Now.ToString();
             resultid = "result" + stuid + exid + now;
-            string query = "insert into Student_Exam_Result values ('" + resultid + "', '" + stuid + "', '" + exid + "', 0, '" + DateTime.Now + "', 0, 0)";
+            string query = "insert into Student_Exam_Result values ('" + resultid + "', '" + stuid + "', '" + exid + "', 0, '" + DateTime.Now + "', 0, '" + times + "')"; 
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();

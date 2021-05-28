@@ -19,6 +19,7 @@ namespace PHANMEMTHI
         }
         string msv;
         string examid;
+        int lanthi; 
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
         public Tests(string stuser)
         {
@@ -101,6 +102,19 @@ namespace PHANMEMTHI
 
         private void vaothi_Click(object sender, EventArgs e)
         {
+            string query = "select max(Times) as lan from Student_Exam_Result where Exam_id = '" + examid + "'";
+            conn.Open();
+            SqlCommand cmd2 = new SqlCommand(query, conn);
+            SqlDataAdapter sda1 = new SqlDataAdapter(cmd2);
+            DataTable dt4 = new DataTable();
+            sda1.Fill(dt4);
+            conn.Close();
+            foreach (DataRow dr in dt4.Rows)
+            {
+                lanthi = Convert.ToInt32(dr["lan"].ToString());
+            }
+            int gioihan = Convert.ToInt32(lblimit.Text);
+
             if (lbsubject.Visible == false)
             {
                 MessageBox.Show("Hay chon bai thi");
@@ -110,15 +124,20 @@ namespace PHANMEMTHI
                 DateTime curtdate = DateTime.Now;                
                 int result1 = DateTime.Compare(startdate, curtdate);
                 int result2 = DateTime.Compare(curtdate, enddate);
-                if (result1 < 0 || result2 < 0)
+                if (result1 < 0 && result2 < 0)
                 {
-                    this.Hide();
-                    Do_Test dtest = new Do_Test(msv, examid);
-                    dtest.Show();
+                    if (lanthi < gioihan)
+                    {
+                        this.Hide();
+                        Do_Test dtest = new Do_Test(msv, examid, lanthi + 1);
+                        dtest.Show();
+                    }
+                    else
+                        MessageBox.Show("Đã hết lần thi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Da qua han thi hoac chua den lich thi");
+                    MessageBox.Show("Chưa đến lịch thi hoặc đã quá hạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

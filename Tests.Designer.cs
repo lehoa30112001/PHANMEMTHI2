@@ -30,9 +30,9 @@ namespace PHANMEMTHI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tests));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.hombut = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -58,8 +58,8 @@ namespace PHANMEMTHI
             this.testinfo = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lbnumber = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.vaothi = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.redobutton = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hombut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -333,30 +333,30 @@ namespace PHANMEMTHI
             // 
             this.testinfo.AllowUserToAddRows = false;
             this.testinfo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.testinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.testinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.testinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.testinfo.BackgroundColor = System.Drawing.Color.White;
             this.testinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.testinfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.testinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.testinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.testinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.testinfo.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.testinfo.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.testinfo.DefaultCellStyle = dataGridViewCellStyle6;
             this.testinfo.EnableHeadersVisualStyles = false;
             this.testinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.testinfo.Location = new System.Drawing.Point(397, 179);
@@ -415,19 +415,6 @@ namespace PHANMEMTHI
             this.label18.TabIndex = 14;
             this.label18.Text = "Số câu";
             // 
-            // vaothi
-            // 
-            this.vaothi.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.vaothi.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vaothi.ForeColor = System.Drawing.Color.White;
-            this.vaothi.Location = new System.Drawing.Point(89, 524);
-            this.vaothi.Name = "vaothi";
-            this.vaothi.Size = new System.Drawing.Size(165, 40);
-            this.vaothi.TabIndex = 16;
-            this.vaothi.Text = "Vào thi";
-            this.vaothi.UseVisualStyleBackColor = false;
-            this.vaothi.Click += new System.EventHandler(this.vaothi_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -439,13 +426,29 @@ namespace PHANMEMTHI
             this.label3.TabIndex = 17;
             this.label3.Text = "DANH SÁCH BÀI KIỂM TRA ";
             // 
+            // redobutton
+            // 
+            this.redobutton.BorderRadius = 25;
+            this.redobutton.CheckedState.Parent = this.redobutton;
+            this.redobutton.CustomImages.Parent = this.redobutton;
+            this.redobutton.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redobutton.ForeColor = System.Drawing.Color.White;
+            this.redobutton.HoverState.Parent = this.redobutton;
+            this.redobutton.Location = new System.Drawing.Point(76, 519);
+            this.redobutton.Name = "redobutton";
+            this.redobutton.ShadowDecoration.Parent = this.redobutton;
+            this.redobutton.Size = new System.Drawing.Size(180, 45);
+            this.redobutton.TabIndex = 18;
+            this.redobutton.Text = "Vào thi";
+            this.redobutton.Click += new System.EventHandler(this.vaothi_Click);
+            // 
             // Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 624);
+            this.Controls.Add(this.redobutton);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.vaothi);
             this.Controls.Add(this.lbnumber);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.testinfo);
@@ -503,7 +506,7 @@ namespace PHANMEMTHI
         private Guna.UI2.WinForms.Guna2DataGridView testinfo;
         private System.Windows.Forms.Label lbnumber;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button vaothi;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button redobutton;
     }
 }
