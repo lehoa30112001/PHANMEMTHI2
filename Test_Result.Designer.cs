@@ -30,9 +30,9 @@ namespace PHANMEMTHI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test_Result));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.hombut = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -44,6 +44,8 @@ namespace PHANMEMTHI
             this.studentid = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Chonlop = new Guna.UI2.WinForms.Guna2Button();
+            this.classinfo = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@ namespace PHANMEMTHI
             this.lbteacher = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbcredit = new System.Windows.Forms.Label();
-            this.classinfo = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Chonlop = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hombut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -215,6 +215,85 @@ namespace PHANMEMTHI
             this.guna2Panel1.Size = new System.Drawing.Size(1062, 480);
             this.guna2Panel1.TabIndex = 44;
             // 
+            // Chonlop
+            // 
+            this.Chonlop.BorderRadius = 15;
+            this.Chonlop.CheckedState.Parent = this.Chonlop;
+            this.Chonlop.CustomImages.Parent = this.Chonlop;
+            this.Chonlop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chonlop.ForeColor = System.Drawing.Color.White;
+            this.Chonlop.HoverState.Parent = this.Chonlop;
+            this.Chonlop.Location = new System.Drawing.Point(798, 413);
+            this.Chonlop.Name = "Chonlop";
+            this.Chonlop.ShadowDecoration.Parent = this.Chonlop;
+            this.Chonlop.Size = new System.Drawing.Size(180, 45);
+            this.Chonlop.TabIndex = 43;
+            this.Chonlop.Text = "Chọn lớp";
+            this.Chonlop.Click += new System.EventHandler(this.Chonlop_Click);
+            // 
+            // classinfo
+            // 
+            this.classinfo.AllowUserToAddRows = false;
+            this.classinfo.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.classinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.classinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.classinfo.BackgroundColor = System.Drawing.Color.White;
+            this.classinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.classinfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.classinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.classinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.classinfo.ColumnHeadersHeight = 35;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.classinfo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.classinfo.EnableHeadersVisualStyles = false;
+            this.classinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.classinfo.Location = new System.Drawing.Point(24, 71);
+            this.classinfo.Name = "classinfo";
+            this.classinfo.ReadOnly = true;
+            this.classinfo.RowHeadersVisible = false;
+            this.classinfo.RowHeadersWidth = 51;
+            this.classinfo.RowTemplate.Height = 24;
+            this.classinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.classinfo.Size = new System.Drawing.Size(602, 387);
+            this.classinfo.TabIndex = 42;
+            this.classinfo.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.classinfo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.classinfo.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.classinfo.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.classinfo.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.classinfo.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.classinfo.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.classinfo.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.classinfo.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.classinfo.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.classinfo.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classinfo.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.classinfo.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.classinfo.ThemeStyle.HeaderStyle.Height = 35;
+            this.classinfo.ThemeStyle.ReadOnly = true;
+            this.classinfo.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.classinfo.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.classinfo.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classinfo.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.classinfo.ThemeStyle.RowsStyle.Height = 24;
+            this.classinfo.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.classinfo.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.classinfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.classinfo_CellContentClick);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -353,85 +432,6 @@ namespace PHANMEMTHI
             this.lbcredit.Text = "Môn";
             this.lbcredit.Visible = false;
             // 
-            // classinfo
-            // 
-            this.classinfo.AllowUserToAddRows = false;
-            this.classinfo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.classinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.classinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.classinfo.BackgroundColor = System.Drawing.Color.White;
-            this.classinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.classinfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.classinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.classinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.classinfo.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.classinfo.DefaultCellStyle = dataGridViewCellStyle18;
-            this.classinfo.EnableHeadersVisualStyles = false;
-            this.classinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.classinfo.Location = new System.Drawing.Point(24, 71);
-            this.classinfo.Name = "classinfo";
-            this.classinfo.ReadOnly = true;
-            this.classinfo.RowHeadersVisible = false;
-            this.classinfo.RowHeadersWidth = 51;
-            this.classinfo.RowTemplate.Height = 24;
-            this.classinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.classinfo.Size = new System.Drawing.Size(602, 387);
-            this.classinfo.TabIndex = 42;
-            this.classinfo.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.classinfo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.classinfo.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.classinfo.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.classinfo.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.classinfo.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.classinfo.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.classinfo.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.classinfo.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.classinfo.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.classinfo.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classinfo.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.classinfo.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.classinfo.ThemeStyle.HeaderStyle.Height = 35;
-            this.classinfo.ThemeStyle.ReadOnly = true;
-            this.classinfo.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.classinfo.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.classinfo.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classinfo.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.classinfo.ThemeStyle.RowsStyle.Height = 24;
-            this.classinfo.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.classinfo.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.classinfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.classinfo_CellContentClick);
-            // 
-            // Chonlop
-            // 
-            this.Chonlop.BorderRadius = 15;
-            this.Chonlop.CheckedState.Parent = this.Chonlop;
-            this.Chonlop.CustomImages.Parent = this.Chonlop;
-            this.Chonlop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chonlop.ForeColor = System.Drawing.Color.White;
-            this.Chonlop.HoverState.Parent = this.Chonlop;
-            this.Chonlop.Location = new System.Drawing.Point(798, 413);
-            this.Chonlop.Name = "Chonlop";
-            this.Chonlop.ShadowDecoration.Parent = this.Chonlop;
-            this.Chonlop.Size = new System.Drawing.Size(180, 45);
-            this.Chonlop.TabIndex = 43;
-            this.Chonlop.Text = "Chọn lớp";
-            this.Chonlop.Click += new System.EventHandler(this.Chonlop_Click);
-            // 
             // Test_Result
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -442,7 +442,6 @@ namespace PHANMEMTHI
             this.Name = "Test_Result";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test_Result";
-            this.Load += new System.EventHandler(this.Test_Result_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hombut)).EndInit();

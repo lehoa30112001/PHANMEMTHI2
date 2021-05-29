@@ -64,6 +64,7 @@
     <Compile Include="Do_Test.Designer.cs">
       <DependentUpon>Do_Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="function.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -16,7 +16,8 @@ namespace PHANMEMTHI.Login_Panel
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
+        function fn = new function();
+        string query;         
         bool teacher = false;
         bool student = false;
         private void gvbutton_Click(object sender, EventArgs e)
@@ -55,16 +56,14 @@ namespace PHANMEMTHI.Login_Panel
         {
             userbox.Text = "";
             passbox.Text = "";
-        }
+        }  // xóa hai ô nhập tên, mật khẩu
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             if (teacher)
             {
-                string query = "select * from teachers where teacher_id = '"+userbox.Text+"' and Teacher_password = '"+ passbox.Text +"'";
-                SqlDataAdapter sda = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+                query = "select * from teachers where teacher_id = '"+userbox.Text+"' and Teacher_password = '"+ passbox.Text +"'";
+                DataTable dt = fn.getdt(query);
                 if (dt.Rows.Count == 1)
                 {
                     MessageBox.Show("Dang nhap thanh cong");
@@ -76,10 +75,8 @@ namespace PHANMEMTHI.Login_Panel
             }   
             else if (student)
             {
-                string query = "select * from students where student_id = '" + userbox.Text + "' and student_password = '" + passbox.Text + "'";
-                SqlDataAdapter sda = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+                query = "select * from students where student_id = '" + userbox.Text + "' and student_password = '" + passbox.Text + "'";
+                DataTable dt = fn.getdt(query);
                 if (dt.Rows.Count == 1)
                 {
                     Login.ActiveForm.Hide();
@@ -98,6 +95,6 @@ namespace PHANMEMTHI.Login_Panel
             } 
                 
             
-        }
-    }
+        } //Đăng nhập
+    } 
 }

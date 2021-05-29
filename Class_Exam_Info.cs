@@ -17,7 +17,7 @@ namespace PHANMEMTHI
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
+        function fn = new function();
         DataTable dt3 = new DataTable();
         DataTable temp = new DataTable();
         string resultid, classname, examtype, examid;
@@ -28,17 +28,11 @@ namespace PHANMEMTHI
             studentid.Text = stuid;
             studentname.Text = name;
             studentbirthday.Text = birthday;
-            conn.Open();
             string query1 = "select * from Exams, Student_Exam_Result where exams.Exam_id = Student_Exam_Result.Exam_id and class_id = '" + classid + "'";
             string query = "select Exams.Exam_id as N'Mã đề thi', Classes.Class_name as N'Lớp', Exams.Exam_order as N'Loại bài thi' , number_question as N'Số câu hỏi', Score as N'Điểm', Access_time as N'Thời gian làm', times as N'Lần', Student_Exam_Result.Result_id as N'Mã kết quả'  from Exams, Student_Exam_Result, classes where exams.Exam_id = Student_Exam_Result.Exam_id and Classes.class_id = '" + classid + "'";
-            SqlCommand cmd1 = new SqlCommand(query, conn);
-            SqlCommand cmd2 = new SqlCommand(query1, conn);
-            SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
-            SqlDataAdapter sda2 = new SqlDataAdapter(cmd2);
-            sda2.Fill(temp);
-            sda1.Fill(dt3);
-            classinfo.DataSource = dt3;           
-            conn.Close();
+            temp = fn.getdt(query1);
+            dt3 = fn.getdt(query);            
+            classinfo.DataSource = dt3;   
         }
 
         private void hombut_Click(object sender, EventArgs e)

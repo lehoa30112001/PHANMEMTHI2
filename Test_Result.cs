@@ -18,9 +18,9 @@ namespace PHANMEMTHI
         }
         string stuid;
         string classid; 
-        DataTable dt3 = new DataTable();       
-        
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
+        DataTable dt3 = new DataTable();
+        function fn = new function();
+        string query; 
         public Test_Result(string msv, string hoten, string ngaysinh)
         {
             InitializeComponent();
@@ -28,19 +28,10 @@ namespace PHANMEMTHI
             studentname.Text = hoten;
             studentbirthday.Text = ngaysinh;
             stuid = msv;
-            conn.Open();
-            string query = "select Classes.Class_id as N'Mã lớp học phần', Classes.Class_name as N'Tên LHP', Subject.Subject_name as N'Môn học', Subject.Credits as N'Số tín chỉ', Teachers.Teacher_name as N'Giáo viên phụ trách'  from Students, Classes, Student_Classes, Teachers, Subject where Students.Student_id = '" + msv + "'";
-            SqlCommand cmd1 = new SqlCommand(query, conn);
-            SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
-            sda1.Fill(dt3);
+            query = "select Classes.Class_id as N'Mã lớp học phần', Classes.Class_name as N'Tên LHP', Subject.Subject_name as N'Môn học', Subject.Credits as N'Số tín chỉ', Teachers.Teacher_name as N'Giáo viên phụ trách'  from Students, Classes, Student_Classes, Teachers, Subject where Students.Student_id = '" + msv + "'";
+            dt3 = fn.getdt(query);
             classinfo.DataSource = dt3;
-            conn.Close();
         }
-        private void Test_Result_Load(object sender, EventArgs e)
-        {
- 
-        }
-
         private void hombut_Click(object sender, EventArgs e)
         {
             this.Hide();

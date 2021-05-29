@@ -17,20 +17,19 @@ namespace PHANMEMTHI
         {
             InitializeComponent();
         }
+        function fn = new function();
+        string query;
         string msv;
         string examid;
-        int lanthi; 
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
+        int lanthi;
+        DateTime startdate;
+        DateTime enddate;
         public Tests(string stuser)
         {
             msv = stuser;
-            InitializeComponent();
-            conn.Open();
-            string query = "select * from students where Student_id = '" + stuser + "'";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            InitializeComponent();            
+            query = "select * from students where Student_id = '" + stuser + "'";
+            DataTable dt = fn.getdt(query);
             foreach (DataRow dr in dt.Rows)
             {
                 studentid.Text = dr["Student_id"].ToString();
@@ -39,8 +38,7 @@ namespace PHANMEMTHI
                 string[] d = s.Split('/');
                 studentbirthday.Text = d[0] + '/' + d[1] + '/' + d[2].Substring(0, 4);
             }
-            conn.Close();
-        }
+        } //Lấy thông tin up lên đầu
 
         private void hombut_Click(object sender, EventArgs e)
         {
@@ -50,32 +48,22 @@ namespace PHANMEMTHI
         }
         private void loaddata()
         {
-            conn.Open();
-            string query = "select Classes.Class_name as N'Lớp học phần', Exams.Exam_id as N'Mã đề', Exams.Exam_order as N'Loại bài thi', Exams.Time as N'Thời gian', Exams.limited_times as N'Giới hạn' from Students, Classes, Student_Classes, Exams where Students.Student_id = '" + msv + "'";
-            SqlCommand cmd1 = new SqlCommand(query, conn);
-            SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
-            DataTable dt3 = new DataTable();
-            sda1.Fill(dt3);
-            testinfo.DataSource = dt3;
-            conn.Close();
-        }
+            query = "select Classes.Class_name as N'Lớp học phần', Exams.Exam_id as N'Mã đề', Exams.Exam_order as N'Loại bài thi', Exams.Time as N'Thời gian', Exams.limited_times as N'Giới hạn' from Students, Classes, Student_Classes, Exams where Students.Student_id = '" + msv + "'";
+            DataTable dt = fn.getdt(query);
+            testinfo.DataSource = dt;
+        } // Load dữ liệu vào Data Grid
 
         private void Tests_Load(object sender, EventArgs e)
         {
             loaddata();
         }
-        DateTime startdate;
-        DateTime enddate; 
+        
         private void testinfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             examid = testinfo.SelectedRows[0].Cells[1].Value.ToString();
-            conn.Open();
-            string query1 = "select * from Students, Classes, Student_Classes, Exams, Subject where Students.Student_id = '" + msv + "' and Exams.Exam_id ='" + examid + "'";
-            SqlCommand cmd2 = new SqlCommand(query1, conn);
-            SqlDataAdapter sda1 = new SqlDataAdapter(cmd2);
-            DataTable dt4 = new DataTable();
-            sda1.Fill(dt4);
-            foreach (DataRow dr1 in dt4.Rows)
+            query = "select * from Students, Classes, Student_Classes, Exams, Subject where Students.Student_id = '" + msv + "' and Exams.Exam_id ='" + examid + "'";
+            DataTable dt = fn.getdt(query);
+            foreach (DataRow dr1 in dt.Rows)
             {
                 lbsubject.Text = dr1["Subject_name"].ToString();
                 lborder.Text = dr1["Exam_order"].ToString();
@@ -97,24 +85,17 @@ namespace PHANMEMTHI
                 lblimit.Visible = true;
                 lbnumber.Visible = true;
             }    
-            conn.Close();
         }
-
+         // Lấy dữ liệu của từng dòng khi click vào Data Grid 
         private void vaothi_Click(object sender, EventArgs e)
         {
-            string query = "select max(Times) as lan from Student_Exam_Result where Exam_id = '" + examid + "'";
-            conn.Open();
-            SqlCommand cmd2 = new SqlCommand(query, conn);
-            SqlDataAdapter sda1 = new SqlDataAdapter(cmd2);
-            DataTable dt4 = new DataTable();
-            sda1.Fill(dt4);
-            conn.Close();
-            foreach (DataRow dr in dt4.Rows)
-            {
-                lanthi = Convert.ToInt32(dr["lan"].ToString());
-            }
+            query = "select max(Times) from Student_Exam_Result where Exam_id = '" + examid + "'";
+            DataTable dt = fn.getdt(query);
+            if (dt.Rows[0][0].ToString() == "")
+                lanthi = 0;
+            else 
+                lanthi = Convert.ToInt32(dt.Rows[0][0].ToString());            
             int gioihan = Convert.ToInt32(lblimit.Text);
-
             if (lbsubject.Visible == false)
             {
                 MessageBox.Show("Hay chon bai thi");
@@ -124,9 +105,9 @@ namespace PHANMEMTHI
                 DateTime curtdate = DateTime.Now;                
                 int result1 = DateTime.Compare(startdate, curtdate);
                 int result2 = DateTime.Compare(curtdate, enddate);
-                if (result1 < 0 && result2 < 0)
+                if (result1 < 0 && result2 < 0) //Check xem có còn hạn thi không
                 {
-                    if (lanthi < gioihan)
+                    if (lanthi < gioihan)  //check xem đã làm quá số lần giới hạn chưa
                     {
                         this.Hide();
                         Do_Test dtest = new Do_Test(msv, examid, lanthi + 1);
@@ -140,6 +121,6 @@ namespace PHANMEMTHI
                     MessageBox.Show("Chưa đến lịch thi hoặc đã quá hạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-        }
+        } //Vào thi
     }
 }

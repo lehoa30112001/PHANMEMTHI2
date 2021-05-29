@@ -50,8 +50,6 @@ namespace PHANMEMTHI
             this.answer3 = new System.Windows.Forms.RadioButton();
             this.answer2 = new System.Windows.Forms.RadioButton();
             this.answer1 = new System.Windows.Forms.RadioButton();
-            this.btnext = new System.Windows.Forms.Button();
-            this.btback = new System.Windows.Forms.Button();
             this.lbquestion = new System.Windows.Forms.Label();
             this.causo = new System.Windows.Forms.Label();
             this.elaptime = new System.Windows.Forms.Label();
@@ -78,9 +76,11 @@ namespace PHANMEMTHI
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btsubmit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btback = new Guna.UI2.WinForms.Guna2Button();
+            this.btnext = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -258,12 +258,12 @@ namespace PHANMEMTHI
             this.guna2Panel1.BorderRadius = 30;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.guna2Panel1.BorderThickness = 3;
+            this.guna2Panel1.Controls.Add(this.btnext);
+            this.guna2Panel1.Controls.Add(this.btback);
             this.guna2Panel1.Controls.Add(this.answer4);
             this.guna2Panel1.Controls.Add(this.answer3);
             this.guna2Panel1.Controls.Add(this.answer2);
             this.guna2Panel1.Controls.Add(this.answer1);
-            this.guna2Panel1.Controls.Add(this.btnext);
-            this.guna2Panel1.Controls.Add(this.btback);
             this.guna2Panel1.Controls.Add(this.lbquestion);
             this.guna2Panel1.Controls.Add(this.causo);
             this.guna2Panel1.Controls.Add(this.elaptime);
@@ -329,32 +329,6 @@ namespace PHANMEMTHI
             this.answer1.UseVisualStyleBackColor = true;
             this.answer1.Click += new System.EventHandler(this.answer1_Click);
             // 
-            // btnext
-            // 
-            this.btnext.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnext.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnext.ForeColor = System.Drawing.Color.White;
-            this.btnext.Location = new System.Drawing.Point(496, 423);
-            this.btnext.Name = "btnext";
-            this.btnext.Size = new System.Drawing.Size(143, 44);
-            this.btnext.TabIndex = 10;
-            this.btnext.Text = "Câu tiếp";
-            this.btnext.UseVisualStyleBackColor = false;
-            this.btnext.Click += new System.EventHandler(this.btnext_Click);
-            // 
-            // btback
-            // 
-            this.btback.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btback.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btback.ForeColor = System.Drawing.Color.White;
-            this.btback.Location = new System.Drawing.Point(93, 423);
-            this.btback.Name = "btback";
-            this.btback.Size = new System.Drawing.Size(140, 44);
-            this.btback.TabIndex = 9;
-            this.btback.Text = "Câu trước";
-            this.btback.UseVisualStyleBackColor = false;
-            this.btback.Click += new System.EventHandler(this.btback_Click);
-            // 
             // lbquestion
             // 
             this.lbquestion.AutoSize = true;
@@ -395,6 +369,7 @@ namespace PHANMEMTHI
             this.Panel2.BorderRadius = 30;
             this.Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.Panel2.BorderThickness = 3;
+            this.Panel2.Controls.Add(this.guna2Button3);
             this.Panel2.Controls.Add(this.page);
             this.Panel2.Controls.Add(this.nextpage);
             this.Panel2.Controls.Add(this.backpage);
@@ -417,7 +392,6 @@ namespace PHANMEMTHI
             this.Panel2.Controls.Add(this.button4);
             this.Panel2.Controls.Add(this.button3);
             this.Panel2.Controls.Add(this.button2);
-            this.Panel2.Controls.Add(this.btsubmit);
             this.Panel2.Controls.Add(this.button1);
             this.Panel2.Location = new System.Drawing.Point(755, 132);
             this.Panel2.Name = "Panel2";
@@ -758,19 +732,6 @@ namespace PHANMEMTHI
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // btsubmit
-            // 
-            this.btsubmit.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btsubmit.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btsubmit.ForeColor = System.Drawing.Color.White;
-            this.btsubmit.Location = new System.Drawing.Point(79, 331);
-            this.btsubmit.Name = "btsubmit";
-            this.btsubmit.Size = new System.Drawing.Size(177, 44);
-            this.btsubmit.TabIndex = 5;
-            this.btsubmit.Text = "Nộp bài";
-            this.btsubmit.UseVisualStyleBackColor = false;
-            this.btsubmit.Click += new System.EventHandler(this.btsubmit_Click);
-            // 
             // button1
             // 
             this.button1.AccessibleName = "";
@@ -791,6 +752,54 @@ namespace PHANMEMTHI
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btback
+            // 
+            this.btback.BorderRadius = 20;
+            this.btback.CheckedState.Parent = this.btback;
+            this.btback.CustomImages.Parent = this.btback;
+            this.btback.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btback.ForeColor = System.Drawing.Color.White;
+            this.btback.HoverState.Parent = this.btback;
+            this.btback.Location = new System.Drawing.Point(130, 412);
+            this.btback.Name = "btback";
+            this.btback.ShadowDecoration.Parent = this.btback;
+            this.btback.Size = new System.Drawing.Size(140, 44);
+            this.btback.TabIndex = 15;
+            this.btback.Text = "Câu trước";
+            this.btback.Click += new System.EventHandler(this.btback_Click);
+            // 
+            // btnext
+            // 
+            this.btnext.BorderRadius = 20;
+            this.btnext.CheckedState.Parent = this.btnext;
+            this.btnext.CustomImages.Parent = this.btnext;
+            this.btnext.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnext.ForeColor = System.Drawing.Color.White;
+            this.btnext.HoverState.Parent = this.btnext;
+            this.btnext.Location = new System.Drawing.Point(484, 412);
+            this.btnext.Name = "btnext";
+            this.btnext.ShadowDecoration.Parent = this.btnext;
+            this.btnext.Size = new System.Drawing.Size(140, 44);
+            this.btnext.TabIndex = 16;
+            this.btnext.Text = "Câu tiếp";
+            this.btnext.Click += new System.EventHandler(this.btnext_Click);
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.BorderRadius = 20;
+            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.HoverState.Parent = this.guna2Button3;
+            this.guna2Button3.Location = new System.Drawing.Point(83, 369);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
+            this.guna2Button3.Size = new System.Drawing.Size(185, 44);
+            this.guna2Button3.TabIndex = 17;
+            this.guna2Button3.Text = "Nộp bài";
+            this.guna2Button3.Click += new System.EventHandler(this.btsubmit_Click);
             // 
             // Do_Test
             // 
@@ -831,7 +840,6 @@ namespace PHANMEMTHI
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label elaptime;
-        private System.Windows.Forms.Button btsubmit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbquestion;
         private System.Windows.Forms.Label causo;
@@ -859,13 +867,14 @@ namespace PHANMEMTHI
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lbnumber;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnext;
-        private System.Windows.Forms.Button btback;
         private System.Windows.Forms.RadioButton answer1;
         private System.Windows.Forms.RadioButton answer4;
         private System.Windows.Forms.RadioButton answer3;
         private System.Windows.Forms.RadioButton answer2;
         private Guna.UI2.WinForms.Guna2Panel Panel2;
         private System.Windows.Forms.Timer timer1;
+        private Guna.UI2.WinForms.Guna2Button btnext;
+        private Guna.UI2.WinForms.Guna2Button btback;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }

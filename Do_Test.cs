@@ -21,26 +21,23 @@ namespace PHANMEMTHI
         int numberquestion, examtime;
         string exid, stuid, examtype;
         int currentquestion = 0;
-        bool[] danhap = new bool[120];
-        int[] dapan = new int[120];
+        bool[] danhap = new bool[120]; //Kiểm tra xem câu i đã nhập câu trả lời chưa
+        int[] dapan = new int[120]; //Lưu đáp án câu i = 0, 1, 2, 3; 
         int totalpage;
-        int currentpage;
+        int currentpage; //Trang số câu hỏi hiện tại (có 20 ô số nhỏ ở bên phải, mỗi trang 20 ô)
         string classname;
         int h, m, s;
-        int times; 
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
+        int times;
+        function fn = new function();
+        string query;         
         public Do_Test(string msv, string examid, int lanthi)
         {
             InitializeComponent();
             times = lanthi; 
             exid = examid;
             stuid = msv;
-            conn.Open();
-            string query = "select * from Students, Classes, Student_Classes, Exams, Subject where Students.Student_id = '" + msv + "' and Exams.Exam_id ='" + examid + "'";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            query = "select * from Students, Classes, Student_Classes, Exams, Subject where Students.Student_id = '" + msv + "' and Exams.Exam_id ='" + examid + "'";
+            DataTable dt = fn.getdt(query);
             foreach (DataRow dr in dt.Rows)
             {
                 string a = dr["number_question"].ToString();
@@ -54,7 +51,6 @@ namespace PHANMEMTHI
                 clname.Text = dr["class_name"].ToString();
                 classname = dr["class_name"].ToString();
             }
-            conn.Close();
         }
         
         DataTable question = new DataTable();
@@ -63,19 +59,15 @@ namespace PHANMEMTHI
         string now;
         private void loadquestion(string examid)
         {
-            string query1 = "select Question_id, Question as qt from Question, Exams where Exams.Exam_id = '" + examid + "'";
-            SqlCommand cmd1 = new SqlCommand(query1, conn);
-            SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
-            sda1.Fill(question);
-        }
+            query = "select Question_id, Question as qt from Question, Exams where Exams.Exam_id = '" + examid + "'";
+            question = fn.getdt(query);
+        } //Load cau hoi vao bang question
         private void loadanswer(string questionid)
         {
             answer.Clear();
-            string query = "select Anwer_id, Anwer from Answer where Question_id = '" + questionid + "'";
-            SqlCommand cmd1 = new SqlCommand(query, conn);
-            SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
-            sda1.Fill(answer);
-        }
+            query = "select Anwer_id, Anwer from Answer where Question_id = '" + questionid + "'";
+            answer = fn.getdt(query);
+        } //Load cau tra loi vao bang answer
         private void question_answer(int number)
         {
             causo.Text = "Câu " + (number + 1).ToString();
@@ -108,7 +100,7 @@ namespace PHANMEMTHI
                     default:
                         break;
                 }
-            }
+            } 
             answer1.Text = "A." + answer.Rows[0][1].ToString();
             answer2.Text = "B." + answer.Rows[1][1].ToString();
             answer3.Text = "C." + answer.Rows[2][1].ToString();
@@ -122,11 +114,11 @@ namespace PHANMEMTHI
             answer4.Checked = false;
             lbnumber.Text = numberquestion.ToString();
             loadquestion(exid);
-            btback.Enabled = false;
-            backpage.Enabled = false;
+            btback.Visible = false;
+            backpage.Visible = false;
             question_answer(currentquestion);
-
             currentpage = 1;
+
             if (numberquestion % 20 == 0)
             {
                 totalpage = numberquestion / 20;
@@ -134,10 +126,10 @@ namespace PHANMEMTHI
             else
             {
                 totalpage = numberquestion / 20 + 1;
-            }
+            }       //Tính số trang câu hỏi (mỗi trang 20 câu) 
             page.Text = currentpage + "/" + totalpage;
 
-            foreach (Control item in Panel2.Controls)
+            foreach (Control item in Panel2.Controls)   
             {
                 int i;
                 for (i = 1; i <= numberquestion; i++)
@@ -152,15 +144,12 @@ namespace PHANMEMTHI
                         }
                     }
                 }
-            }
+            } //Chỉ hiện số button = tổng số câu hỏi
 
             now = DateTime.Now.ToString();
             resultid = "result" + stuid + exid + now;
-            string query = "insert into Student_Exam_Result values ('" + resultid + "', '" + stuid + "', '" + exid + "', 0, '" + DateTime.Now + "', 0, '" + times + "')"; 
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            query = "insert into Student_Exam_Result values ('" + resultid + "', '" + stuid + "', '" + exid + "', 0, '" + DateTime.Now + "', 0, '" + times + "')";
+            fn.setdata(query);  //Set mã đề thi
 
             h = examtime / 60;
             m = examtime - (h * 60);
@@ -168,7 +157,7 @@ namespace PHANMEMTHI
             elaptime.Text = h + ":" + m + ":" + s;
 
             if (numberquestion <= 20)
-                nextpage.Enabled = false;
+                nextpage.Visible = false;
         }
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -176,20 +165,20 @@ namespace PHANMEMTHI
             currentquestion = Convert.ToInt32(button.Text) - 1;
             question_answer(Convert.ToInt32(button.Text) - 1);
             if (currentquestion == 0)
-                btback.Enabled = false;
+                btback.Visible = false;
             else
-                btback.Enabled = true;
+                btback.Visible = true;
             if (currentquestion == numberquestion - 1)
-                btnext.Enabled = false;
+                btnext.Visible = false;
             else
-                btnext.Enabled = true;
+                btnext.Visible = true;
         }
         private void btback_Click(object sender, EventArgs e)
         {
             currentquestion--;
-            btnext.Enabled = true;
+            btnext.Visible = true;
             if (currentquestion == 0)
-                btback.Enabled = false;
+                btback.Visible = false;
             question_answer(currentquestion);
         }
         private void saveanswer(int question0, int answer0)
@@ -205,30 +194,24 @@ namespace PHANMEMTHI
                         b.BackColor = Color.Red;
                     }
                 }
-            }
+            } // Chuyển các câu hỏi đã nhập sang đỏ
             string questionidnow = question.Rows[question0][0].ToString();
             string answeridnow = answer.Rows[answer0][0].ToString();
             string choiceid = "choice" + resultid + questionidnow + answer0;
-            if (!danhap[question0])
+            if (!danhap[question0])  
             {
-                string query = "insert into Student_Choice values ('" + choiceid + "', '" + resultid + "', '" + answeridnow + "','" + questionidnow + "')";
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                query = "insert into Student_Choice values ('" + choiceid + "', '" + resultid + "', '" + answeridnow + "','" + questionidnow + "')";
+                fn.setdata(query);
                 danhap[currentquestion] = true;
                 dapan[currentquestion] = answer0;
-            }
+            } //Nếu như đáp án chưa được nhập, có nghĩa câu đó làm lần đầu thì sẽ tạo mới (insert)
             else
             {
                 choiceid = "choice" + resultid + questionidnow + dapan[question0];
-                string query = "update Student_Choice set Answer_id = '" + answeridnow + "' where Choise_history_id = '" + choiceid + "'";
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                query = "update Student_Choice set Answer_id = '" + answeridnow + "'  where Choise_history_id = '" + choiceid + "'";
+                fn.setdata(query);
                 dapan[question0] = answer0;
-            }
+            } // Nếu đã nhập trước đó thì cập nhật vào cái choiceid cũ
         }
 
         private void answer1_Click(object sender, EventArgs e)
@@ -313,17 +296,17 @@ namespace PHANMEMTHI
         private void backpage_Click(object sender, EventArgs e)
         {
             currentpage--;
-            nextpage.Enabled = true;
+            nextpage.Visible = true;
             if (currentpage == 1)
-                backpage.Enabled = false;
+                backpage.Visible = false;
             loadpage(currentpage);
         }
         private void nextpage_Click(object sender, EventArgs e)
         {
             currentpage = currentpage + 1;
-            backpage.Enabled = true;
+            backpage.Visible = true;
             if (currentpage == totalpage)
-                nextpage.Enabled = false;
+                nextpage.Visible = false;
             loadpage(currentpage);
         }
         private void btsubmit_Click(object sender, EventArgs e)
@@ -344,10 +327,10 @@ namespace PHANMEMTHI
         {
             
             currentquestion = currentquestion + 1;
-            btback.Enabled = true; 
+            btback.Visible = true; 
             question_answer(currentquestion);            
             if (currentquestion == numberquestion - 1)
-                btnext.Enabled = false;
+                btnext.Visible = false;
         }
         private void takeaccesstime()
         {
@@ -355,10 +338,7 @@ namespace PHANMEMTHI
             int access = examtime * 60;
             int second = access - elap;
             string query = "update Student_Exam_Result set Access_time = '" + second + "' where Result_id = '" + resultid + "'";
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
+            fn.setdata(query);
+        } // Lấy tổng thời gian làm bài
     }
 }
