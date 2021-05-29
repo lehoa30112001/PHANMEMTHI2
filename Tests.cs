@@ -48,7 +48,7 @@ namespace PHANMEMTHI
         }
         private void loaddata()
         {
-            query = "select Classes.Class_name as N'Lớp học phần', Exams.Exam_id as N'Mã đề', Exams.Exam_order as N'Loại bài thi', Exams.Time as N'Thời gian', Exams.limited_times as N'Giới hạn' from Students, Classes, Student_Classes, Exams where Students.Student_id = '" + msv + "'";
+            query = "select Classes.Class_name as N'Lớp học phần', Exams.Exam_id as N'Mã đề', Exams.Exam_order as N'Loại bài thi', Exams.Time as N'Thời gian', Exams.limited_times as N'Giới hạn' from Students, Classes, Student_Classes, Exams where Students.Student_id = '" + msv + "' and number_question > 0";
             DataTable dt = fn.getdt(query);
             testinfo.DataSource = dt;
         } // Load dữ liệu vào Data Grid
