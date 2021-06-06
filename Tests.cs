@@ -48,7 +48,7 @@ namespace PHANMEMTHI
         }
         private void loaddata()
         {
-            query = "select Classes.Class_name as N'Lớp học phần', Exams.Exam_id as N'Mã đề', Exams.Exam_order as N'Loại bài thi', Exams.Time as N'Thời gian', Exams.limited_times as N'Giới hạn' from Students, Classes, Student_Classes, Exams where Students.Student_id = '" + msv + "' and number_question > 0";
+            query = "select Classes.Class_name as N'Lớp học phần', Exams.Exam_id as N'Mã đề', Exams.Exam_order as N'Loại bài thi', Exams.Time as N'Thời gian', Exams.limited_times as N'Giới hạn' from Students, Classes, Student_Classes, Exams where Students.Student_id = '" + msv + "' and number_question > 0 and Students.Student_id = Student_Classes.Student_id and Classes.Class_id = Student_Classes.Class_id and Exams.Class_id = Classes.Class_id";
             DataTable dt = fn.getdt(query);
             testinfo.DataSource = dt;
         } // Load dữ liệu vào Data Grid
@@ -61,7 +61,7 @@ namespace PHANMEMTHI
         private void testinfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             examid = testinfo.SelectedRows[0].Cells[1].Value.ToString();
-            query = "select * from Students, Classes, Student_Classes, Exams, Subject where Students.Student_id = '" + msv + "' and Exams.Exam_id ='" + examid + "'";
+            query = "select * from Students, Classes, Student_Classes, Exams, Subject where Students.Student_id = '" + msv + "' and Exams.Exam_id ='" + examid + "' and Students.Student_id = Student_Classes.Student_id and Classes.Class_id = Student_Classes.Class_id and Exams.Class_id = Classes.Class_id and Subject.Subject_id = Classes.Subject_id";
             DataTable dt = fn.getdt(query);
             foreach (DataRow dr1 in dt.Rows)
             {
@@ -89,7 +89,7 @@ namespace PHANMEMTHI
          // Lấy dữ liệu của từng dòng khi click vào Data Grid 
         private void vaothi_Click(object sender, EventArgs e)
         {
-            query = "select max(Times) from Student_Exam_Result where Exam_id = '" + examid + "'";
+            query = "select max(Times) from Student_Exam_Result where Exam_id = '" + examid + "' and Student_Exam_Result.Student_id = '" + msv + "'";
             DataTable dt = fn.getdt(query);
             if (dt.Rows[0][0].ToString() == "")
                 lanthi = 0;

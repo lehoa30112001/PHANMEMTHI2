@@ -150,12 +150,10 @@ namespace PHANMEMTHI
             resultid = "result" + stuid + exid + now;
             query = "insert into Student_Exam_Result values ('" + resultid + "', '" + stuid + "', '" + exid + "', 0, '" + DateTime.Now + "', 0, '" + times + "')";
             fn.setdata(query);  //Set mã đề thi
-
             h = examtime / 60;
             m = examtime - (h * 60);
             s = 0;
             elaptime.Text = h + ":" + m + ":" + s;
-
             if (numberquestion <= 20)
                 nextpage.Visible = false;
         }
