@@ -183,8 +183,8 @@ namespace PHANMEMTHI
         {
             foreach (Control item in Panel2.Controls)
             {
-                string buttonname = "button" + (question0 + 1);
-                if (item.Name == buttonname)
+                string buttonname = Convert.ToString(question0 + 1);
+                if (item.Text == buttonname)
                 {
                     Button b = item as Button;
                     if (b != null)
