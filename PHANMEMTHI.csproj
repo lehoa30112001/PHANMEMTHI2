@@ -52,16 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class_Exam_Info.cs">
+    <Compile Include="Ketquathi\Class_Exam_Info.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class_Exam_Info.Designer.cs">
+    <Compile Include="Ketquathi\Class_Exam_Info.Designer.cs">
       <DependentUpon>Class_Exam_Info.cs</DependentUpon>
     </Compile>
-    <Compile Include="Do_Test.cs">
+    <Compile Include="Lambaithi\Do_Test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Do_Test.Designer.cs">
+    <Compile Include="Lambaithi\Do_Test.Designer.cs">
       <DependentUpon>Do_Test.cs</DependentUpon>
     </Compile>
     <Compile Include="function.cs" />
@@ -90,10 +90,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShowExamResult.cs">
+    <Compile Include="Ketquathi\ShowExamResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowExamResult.Designer.cs">
+    <Compile Include="Ketquathi\ShowExamResult.Designer.cs">
       <DependentUpon>ShowExamResult.cs</DependentUpon>
     </Compile>
     <Compile Include="Student_Login.cs">
@@ -102,22 +102,22 @@
     <Compile Include="Student_Login.Designer.cs">
       <DependentUpon>Student_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tests.cs">
+    <Compile Include="Lambaithi\Tests.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tests.Designer.cs">
+    <Compile Include="Lambaithi\Tests.Designer.cs">
       <DependentUpon>Tests.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test_Result.cs">
+    <Compile Include="Ketquathi\Test_Result.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test_Result.Designer.cs">
+    <Compile Include="Ketquathi\Test_Result.Designer.cs">
       <DependentUpon>Test_Result.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Class_Exam_Info.resx">
+    <EmbeddedResource Include="Ketquathi\Class_Exam_Info.resx">
       <DependentUpon>Class_Exam_Info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Do_Test.resx">
+    <EmbeddedResource Include="Lambaithi\Do_Test.resx">
       <DependentUpon>Do_Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -138,16 +138,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ShowExamResult.resx">
+    <EmbeddedResource Include="Ketquathi\ShowExamResult.resx">
       <DependentUpon>ShowExamResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student_Login.resx">
       <DependentUpon>Student_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tests.resx">
+    <EmbeddedResource Include="Lambaithi\Tests.resx">
       <DependentUpon>Tests.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test_Result.resx">
+    <EmbeddedResource Include="Ketquathi\Test_Result.resx">
       <DependentUpon>Test_Result.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

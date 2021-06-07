@@ -28,7 +28,7 @@ namespace PHANMEMTHI
             studentname.Text = hoten;
             studentbirthday.Text = ngaysinh;
             stuid = msv;
-            query = "select Classes.Class_id as N'Mã lớp học phần', Classes.Class_name as N'Tên LHP', Subject.Subject_name as N'Môn học', Subject.Credits as N'Số tín chỉ', Teachers.Teacher_name as N'Giáo viên phụ trách'  from Students, Classes, Student_Classes, Teachers, Subject where Students.Student_id = '" + msv + "'";
+            query = "select Classes.Class_id as N'Mã lớp học phần', Classes.Class_name as N'Tên LHP', Subject.Subject_name as N'Môn học', Subject.Credits as N'Số tín chỉ', Teachers.Teacher_name as N'Giáo viên phụ trách'  from Students, Classes, Student_Classes, Teachers, Subject where Students.Student_id = '" + msv + "' and Students.Student_id = Student_Classes.Student_id and Classes.Class_id = Student_Classes.Class_id and Teachers.Teacher_id = Classes.Teacher_id and Classes.Subject_id = Subject.Subject_id";
             dt3 = fn.getdt(query);
             classinfo.DataSource = dt3;
         }

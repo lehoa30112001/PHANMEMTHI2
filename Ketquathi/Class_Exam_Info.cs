@@ -29,7 +29,7 @@ namespace PHANMEMTHI
             studentname.Text = name;
             studentbirthday.Text = birthday;
             string query1 = "select * from Exams, Student_Exam_Result where exams.Exam_id = Student_Exam_Result.Exam_id and class_id = '" + classid + "'";
-            string query = "select Exams.Exam_id as N'Mã đề thi', Classes.Class_name as N'Lớp', Exams.Exam_order as N'Loại bài thi' , number_question as N'Số câu hỏi', Score as N'Điểm', Access_time as N'Thời gian làm', times as N'Lần', Student_Exam_Result.Result_id as N'Mã kết quả'  from Exams, Student_Exam_Result, classes where exams.Exam_id = Student_Exam_Result.Exam_id and Classes.class_id = '" + classid + "'";
+            string query = "select Exams.Exam_id as N'Mã đề thi', Classes.Class_name as N'Lớp', Exams.Exam_order as N'Loại bài thi' , number_question as N'Số câu hỏi', Score as N'Điểm', Access_time as N'Thời gian làm', times as N'Lần', Student_Exam_Result.Result_id as N'Mã kết quả'  from Exams, Student_Exam_Result, classes where exams.Exam_id = Student_Exam_Result.Exam_id  and Exams.Class_id = Classes.Class_id and Classes.class_id = '" + classid + "'";
             temp = fn.getdt(query1);
             dt3 = fn.getdt(query);            
             classinfo.DataSource = dt3;
