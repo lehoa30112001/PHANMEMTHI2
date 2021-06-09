@@ -47,7 +47,8 @@ namespace PHANMEMTHI
                 int second = Convert.ToInt32(dr[0].ToString());
                 int min = second / 60;
                 second = second - min * 60;
-                extime.Text = min + ":" + second;
+                extime.Text = string.Format("{0}:{1}", min.ToString().PadLeft(2, '0'), second.ToString().PadLeft(2, '0'));
+                //extime.Text = min + ":" + second;
             }
             double score = Convert.ToDouble(truenumber) * 10.0 / Convert.ToDouble(questionnumber);
             string query1 = "update Student_Exam_Result set Score = '" + score + "' where Result_id = '" + examresultid + "'";
@@ -63,6 +64,11 @@ namespace PHANMEMTHI
         private void ShowExamResult_Load(object sender, EventArgs e)
         {
             loaddata();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void backbutton_Click(object sender, EventArgs e)

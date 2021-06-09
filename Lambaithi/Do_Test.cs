@@ -153,7 +153,7 @@ namespace PHANMEMTHI
             h = examtime / 60;
             m = examtime - (h * 60);
             s = 0;
-            elaptime.Text = h + ":" + m + ":" + s;
+            elaptime.Text = string.Format("{0}:{1}:{2}", h.ToString().PadLeft(2, '0'), m.ToString().PadLeft(2, '0'), s.ToString().PadLeft(2, '0'));
             if (numberquestion <= 20)
                 nextpage.Visible = false;
         }
@@ -240,7 +240,7 @@ namespace PHANMEMTHI
         {
             if (m < 5)
                 elaptime.ForeColor = Color.Red;
-            elaptime.Text = h + ":" + m + ":" + s;
+            elaptime.Text = string.Format("{0}:{1}:{2}", h.ToString().PadLeft(2, '0'), m.ToString().PadLeft(2, '0'), s.ToString().PadLeft(2, '0'));
             if (s == 0)
             {
                 if (m == 0)

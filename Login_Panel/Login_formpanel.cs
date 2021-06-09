@@ -66,7 +66,10 @@ namespace PHANMEMTHI.Login_Panel
                 DataTable dt = fn.getdt(query);
                 if (dt.Rows.Count == 1)
                 {
-                    MessageBox.Show("Dang nhap thanh cong");
+                    Login.ActiveForm.Hide();
+
+                    PHANMEMTHI.Forms.MainTeacherForm stlogin = new Forms.MainTeacherForm(userbox.Text, @"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
+                    stlogin.Show();
                 }  
                 else
                 {

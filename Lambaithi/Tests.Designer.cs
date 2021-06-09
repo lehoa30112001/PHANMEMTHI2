@@ -30,9 +30,9 @@ namespace PHANMEMTHI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tests));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.hombut = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -60,14 +60,18 @@ namespace PHANMEMTHI
             this.label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.redobutton = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hombut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testinfo)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.hombut);
@@ -85,11 +89,12 @@ namespace PHANMEMTHI
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(992, 17);
+            this.label1.Location = new System.Drawing.Point(992, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 23);
             this.label1.TabIndex = 42;
@@ -98,8 +103,9 @@ namespace PHANMEMTHI
             // 
             // hombut
             // 
+            this.hombut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hombut.Image = ((System.Drawing.Image)(resources.GetObject("hombut.Image")));
-            this.hombut.Location = new System.Drawing.Point(956, 8);
+            this.hombut.Location = new System.Drawing.Point(956, 18);
             this.hombut.Name = "hombut";
             this.hombut.ShadowDecoration.Parent = this.hombut;
             this.hombut.Size = new System.Drawing.Size(30, 32);
@@ -110,6 +116,7 @@ namespace PHANMEMTHI
             // 
             // studentbirthday
             // 
+            this.studentbirthday.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.studentbirthday.AutoSize = true;
             this.studentbirthday.BackColor = System.Drawing.Color.Transparent;
             this.studentbirthday.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,6 +164,7 @@ namespace PHANMEMTHI
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -193,10 +201,11 @@ namespace PHANMEMTHI
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(26, 141);
+            this.label2.Location = new System.Drawing.Point(25, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 26);
             this.label2.TabIndex = 1;
@@ -204,10 +213,11 @@ namespace PHANMEMTHI
             // 
             // lbsubject
             // 
+            this.lbsubject.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbsubject.AutoSize = true;
             this.lbsubject.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbsubject.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbsubject.Location = new System.Drawing.Point(27, 179);
+            this.lbsubject.Location = new System.Drawing.Point(26, 187);
             this.lbsubject.Name = "lbsubject";
             this.lbsubject.Size = new System.Drawing.Size(46, 22);
             this.lbsubject.TabIndex = 2;
@@ -216,10 +226,11 @@ namespace PHANMEMTHI
             // 
             // lborder
             // 
+            this.lborder.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lborder.AutoSize = true;
             this.lborder.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lborder.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lborder.Location = new System.Drawing.Point(27, 264);
+            this.lborder.Location = new System.Drawing.Point(26, 275);
             this.lborder.Name = "lborder";
             this.lborder.Size = new System.Drawing.Size(70, 22);
             this.lborder.TabIndex = 4;
@@ -228,10 +239,11 @@ namespace PHANMEMTHI
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label5.Location = new System.Drawing.Point(26, 226);
+            this.label5.Location = new System.Drawing.Point(25, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 26);
             this.label5.TabIndex = 3;
@@ -239,10 +251,11 @@ namespace PHANMEMTHI
             // 
             // lbtime
             // 
+            this.lbtime.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbtime.AutoSize = true;
             this.lbtime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtime.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbtime.Location = new System.Drawing.Point(220, 264);
+            this.lbtime.Location = new System.Drawing.Point(205, 277);
             this.lbtime.Name = "lbtime";
             this.lbtime.Size = new System.Drawing.Size(69, 22);
             this.lbtime.TabIndex = 6;
@@ -251,10 +264,11 @@ namespace PHANMEMTHI
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label10.Location = new System.Drawing.Point(219, 226);
+            this.label10.Location = new System.Drawing.Point(204, 239);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(110, 26);
             this.label10.TabIndex = 5;
@@ -262,10 +276,11 @@ namespace PHANMEMTHI
             // 
             // lbstart
             // 
+            this.lbstart.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbstart.AutoSize = true;
             this.lbstart.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbstart.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbstart.Location = new System.Drawing.Point(27, 461);
+            this.lbstart.Location = new System.Drawing.Point(28, 467);
             this.lbstart.Name = "lbstart";
             this.lbstart.Size = new System.Drawing.Size(102, 22);
             this.lbstart.TabIndex = 8;
@@ -274,10 +289,11 @@ namespace PHANMEMTHI
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label12.Location = new System.Drawing.Point(26, 423);
+            this.label12.Location = new System.Drawing.Point(27, 429);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(133, 26);
             this.label12.TabIndex = 7;
@@ -285,10 +301,11 @@ namespace PHANMEMTHI
             // 
             // lbend
             // 
+            this.lbend.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbend.AutoSize = true;
             this.lbend.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbend.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbend.Location = new System.Drawing.Point(205, 461);
+            this.lbend.Location = new System.Drawing.Point(192, 469);
             this.lbend.Name = "lbend";
             this.lbend.Size = new System.Drawing.Size(102, 22);
             this.lbend.TabIndex = 10;
@@ -297,10 +314,11 @@ namespace PHANMEMTHI
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label14.Location = new System.Drawing.Point(204, 423);
+            this.label14.Location = new System.Drawing.Point(191, 431);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(151, 26);
             this.label14.TabIndex = 9;
@@ -308,10 +326,11 @@ namespace PHANMEMTHI
             // 
             // lblimit
             // 
+            this.lblimit.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblimit.AutoSize = true;
             this.lblimit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblimit.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lblimit.Location = new System.Drawing.Point(27, 358);
+            this.lblimit.Location = new System.Drawing.Point(26, 375);
             this.lblimit.Name = "lblimit";
             this.lblimit.Size = new System.Drawing.Size(65, 22);
             this.lblimit.TabIndex = 12;
@@ -320,10 +339,11 @@ namespace PHANMEMTHI
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label16.Location = new System.Drawing.Point(26, 320);
+            this.label16.Location = new System.Drawing.Point(25, 337);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(166, 26);
             this.label16.TabIndex = 11;
@@ -333,40 +353,43 @@ namespace PHANMEMTHI
             // 
             this.testinfo.AllowUserToAddRows = false;
             this.testinfo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.testinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.testinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.testinfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.testinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.testinfo.BackgroundColor = System.Drawing.Color.White;
             this.testinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.testinfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.testinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.testinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.testinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.testinfo.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.testinfo.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.testinfo.DefaultCellStyle = dataGridViewCellStyle9;
             this.testinfo.EnableHeadersVisualStyles = false;
             this.testinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.testinfo.Location = new System.Drawing.Point(397, 179);
+            this.testinfo.Location = new System.Drawing.Point(23, 70);
             this.testinfo.Name = "testinfo";
             this.testinfo.ReadOnly = true;
             this.testinfo.RowHeadersVisible = false;
             this.testinfo.RowHeadersWidth = 51;
             this.testinfo.RowTemplate.Height = 24;
             this.testinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.testinfo.Size = new System.Drawing.Size(682, 385);
+            this.testinfo.Size = new System.Drawing.Size(675, 391);
             this.testinfo.TabIndex = 13;
             this.testinfo.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.testinfo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -394,10 +417,11 @@ namespace PHANMEMTHI
             // 
             // lbnumber
             // 
+            this.lbnumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbnumber.AutoSize = true;
             this.lbnumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnumber.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbnumber.Location = new System.Drawing.Point(220, 358);
+            this.lbnumber.Location = new System.Drawing.Point(205, 377);
             this.lbnumber.Name = "lbnumber";
             this.lbnumber.Size = new System.Drawing.Size(62, 22);
             this.lbnumber.TabIndex = 15;
@@ -406,10 +430,11 @@ namespace PHANMEMTHI
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label18.Location = new System.Drawing.Point(219, 320);
+            this.label18.Location = new System.Drawing.Point(204, 339);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(79, 26);
             this.label18.TabIndex = 14;
@@ -417,10 +442,11 @@ namespace PHANMEMTHI
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label3.Location = new System.Drawing.Point(578, 125);
+            this.label3.Location = new System.Drawing.Point(570, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(335, 26);
             this.label3.TabIndex = 17;
@@ -428,19 +454,35 @@ namespace PHANMEMTHI
             // 
             // redobutton
             // 
+            this.redobutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.redobutton.BorderRadius = 25;
             this.redobutton.CheckedState.Parent = this.redobutton;
             this.redobutton.CustomImages.Parent = this.redobutton;
             this.redobutton.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.redobutton.ForeColor = System.Drawing.Color.White;
             this.redobutton.HoverState.Parent = this.redobutton;
-            this.redobutton.Location = new System.Drawing.Point(76, 519);
+            this.redobutton.Location = new System.Drawing.Point(69, 548);
             this.redobutton.Name = "redobutton";
             this.redobutton.ShadowDecoration.Parent = this.redobutton;
             this.redobutton.Size = new System.Drawing.Size(180, 45);
             this.redobutton.TabIndex = 18;
             this.redobutton.Text = "Vào thi";
             this.redobutton.Click += new System.EventHandler(this.vaothi_Click);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel1.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.guna2Panel1.BorderRadius = 25;
+            this.guna2Panel1.BorderThickness = 3;
+            this.guna2Panel1.Controls.Add(this.testinfo);
+            this.guna2Panel1.Location = new System.Drawing.Point(361, 132);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(719, 480);
+            this.guna2Panel1.TabIndex = 46;
             // 
             // Tests
             // 
@@ -451,7 +493,6 @@ namespace PHANMEMTHI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbnumber);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.testinfo);
             this.Controls.Add(this.lblimit);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.lbend);
@@ -465,6 +506,7 @@ namespace PHANMEMTHI
             this.Controls.Add(this.lbsubject);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.guna2Panel1);
             this.Name = "Tests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tests";
@@ -474,6 +516,7 @@ namespace PHANMEMTHI
             ((System.ComponentModel.ISupportInitialize)(this.hombut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testinfo)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,5 +551,6 @@ namespace PHANMEMTHI
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button redobutton;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }
