@@ -67,9 +67,9 @@ namespace PHANMEMTHI.Login_Panel
                 if (dt.Rows.Count == 1)
                 {
                     Login.ActiveForm.Hide();
-
-                    PHANMEMTHI.Forms.MainTeacherForm stlogin = new Forms.MainTeacherForm(userbox.Text, @"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
-                    stlogin.Show();
+                    MessageBox.Show("Nhap dung hoac mat khau");
+                    // PHANMEMTHI.Forms.MainTeacherForm stlogin = new Forms.MainTeacherForm(userbox.Text, @"Data Source=DESKTOP-1LOB8EI;Initial Catalog=phanmemthi;Integrated Security=True");
+                    //    stlogin.Show();
                 }  
                 else
                 {
