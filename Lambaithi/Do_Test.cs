@@ -59,7 +59,7 @@ namespace PHANMEMTHI
         string now;
         private void loadquestion(string examid)
         {
-            query = "select Question_id, Question as qt from Question, Exams where Exams.Exam_id = '" + examid + "'";
+            query = "select Question_id, Question as qt from Question, Exams where Question.Exam_id = Exams.Exam_id and Exams.Exam_id = '" + examid + "'";
             question = fn.getdt(query);
         } //Load cau hoi vao bang question
         private void loadanswer(string questionid)

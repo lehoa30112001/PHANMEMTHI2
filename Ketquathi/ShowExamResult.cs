@@ -66,11 +66,6 @@ namespace PHANMEMTHI
             loaddata();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void backbutton_Click(object sender, EventArgs e)
         {
             string query = "Select Class_id from Exams where Exam_id = '" + examid + "'";

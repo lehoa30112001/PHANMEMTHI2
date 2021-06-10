@@ -38,34 +38,31 @@ namespace PHANMEMTHI
             Student_Login stlogin = new Student_Login(stuid);
             stlogin.Show();
         }
-
+        private void napdl(int i)
+        {
+            classid = classinfo[0, i].Value.ToString();
+            lbsubject.Text = classinfo[2, i].Value.ToString();
+            lbclass.Text = classinfo[1, i].Value.ToString();
+            lbcredit.Text = classinfo[3, i].Value.ToString();
+            lbteacher.Text = classinfo[4, i].Value.ToString();
+        }
         private void classinfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach (DataRow dr1 in dt3.Rows)
-            {
-                classid = classinfo.SelectedRows[0].Cells[0].Value.ToString();
-                lbsubject.Text = classinfo.SelectedRows[0].Cells[2].Value.ToString();
-                lbclass.Text = classinfo.SelectedRows[0].Cells[1].Value.ToString();
-                lbcredit.Text = classinfo.SelectedRows[0].Cells[3].Value.ToString();
-                lbteacher.Text = classinfo.SelectedRows[0].Cells[4].Value.ToString();
-
-                lbsubject.Visible = true;
-                lbclass.Visible = true;
-                lbcredit.Visible = true;
-                lbteacher.Visible = true;
-            }
+            int i = classinfo.CurrentRow.Index;
+            napdl(i);
         }
 
         private void Chonlop_Click(object sender, EventArgs e)
-        {
-            if (lbteacher.Visible == false)
-                MessageBox.Show("Chon lop hoc !!");
-            else
-            {
+        {            
                 this.Hide();
                 Class_Exam_Info ce = new Class_Exam_Info(classid, studentid.Text, studentname.Text, studentbirthday.Text);
-                ce.Show();
-            }            
+                ce.Show();                         
+        }
+
+        private void Test_Result_Load(object sender, EventArgs e)
+        {
+            if (classinfo.Rows.Count > 0)
+                napdl(0);
         }
     }
 }

@@ -94,14 +94,14 @@ namespace PHANMEMTHI
             if (dt.Rows[0][0].ToString() == "")
                 lanthi = 0;
             else 
-                lanthi = Convert.ToInt32(dt.Rows[0][0].ToString());            
-            int gioihan = Convert.ToInt32(lblimit.Text);
+                lanthi = Convert.ToInt32(dt.Rows[0][0].ToString());  
             if (lbsubject.Visible == false)
             {
                 MessageBox.Show("Hay chon bai thi");
             }   
             else
             {
+                int gioihan = Convert.ToInt32(lblimit.Text);
                 DateTime curtdate = DateTime.Now;                
                 int result1 = DateTime.Compare(startdate, curtdate);
                 int result2 = DateTime.Compare(curtdate, enddate);

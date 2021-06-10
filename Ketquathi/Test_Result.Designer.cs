@@ -30,9 +30,9 @@ namespace PHANMEMTHI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test_Result));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.hombut = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -245,8 +245,8 @@ namespace PHANMEMTHI
             // 
             this.classinfo.AllowUserToAddRows = false;
             this.classinfo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.classinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.classinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.classinfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -255,23 +255,23 @@ namespace PHANMEMTHI
             this.classinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.classinfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.classinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.classinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.classinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.classinfo.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.classinfo.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.classinfo.DefaultCellStyle = dataGridViewCellStyle6;
             this.classinfo.EnableHeadersVisualStyles = false;
             this.classinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.classinfo.Location = new System.Drawing.Point(24, 71);
@@ -344,7 +344,6 @@ namespace PHANMEMTHI
             this.label15.Size = new System.Drawing.Size(46, 22);
             this.label15.TabIndex = 41;
             this.label15.Text = "Môn";
-            this.label15.Visible = false;
             // 
             // label2
             // 
@@ -371,7 +370,6 @@ namespace PHANMEMTHI
             this.label13.Size = new System.Drawing.Size(46, 22);
             this.label13.TabIndex = 40;
             this.label13.Text = "Môn";
-            this.label13.Visible = false;
             // 
             // lbsubject
             // 
@@ -385,7 +383,6 @@ namespace PHANMEMTHI
             this.lbsubject.Size = new System.Drawing.Size(46, 22);
             this.lbsubject.TabIndex = 31;
             this.lbsubject.Text = "Môn";
-            this.lbsubject.Visible = false;
             // 
             // label14
             // 
@@ -425,7 +422,6 @@ namespace PHANMEMTHI
             this.lbclass.Size = new System.Drawing.Size(46, 22);
             this.lbclass.TabIndex = 38;
             this.lbclass.Text = "Môn";
-            this.lbclass.Visible = false;
             // 
             // lbteacher
             // 
@@ -439,7 +435,6 @@ namespace PHANMEMTHI
             this.lbteacher.Size = new System.Drawing.Size(46, 22);
             this.lbteacher.TabIndex = 34;
             this.lbteacher.Text = "Môn";
-            this.lbteacher.Visible = false;
             // 
             // label10
             // 
@@ -466,7 +461,6 @@ namespace PHANMEMTHI
             this.lbcredit.Size = new System.Drawing.Size(46, 22);
             this.lbcredit.TabIndex = 36;
             this.lbcredit.Text = "Môn";
-            this.lbcredit.Visible = false;
             // 
             // Test_Result
             // 
@@ -478,6 +472,8 @@ namespace PHANMEMTHI
             this.Name = "Test_Result";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test_Result";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Test_Result_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hombut)).EndInit();
