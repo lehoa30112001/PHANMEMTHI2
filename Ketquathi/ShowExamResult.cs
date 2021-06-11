@@ -76,8 +76,7 @@ namespace PHANMEMTHI
             foreach (DataRow dr in dt.Rows)
             {
                 string s = dr[0].ToString();
-                string[] d = s.Split('/');
-                birthday = d[0] + '/' + d[1] + '/' + d[2].Substring(0, 4);
+                birthday = s.Substring(0, 10);
             }
             if (huongve == "dotest")
             {

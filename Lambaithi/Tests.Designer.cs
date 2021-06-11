@@ -44,7 +44,6 @@ namespace PHANMEMTHI
             this.studentid = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbsubject = new System.Windows.Forms.Label();
             this.lborder = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbtime = new System.Windows.Forms.Label();
@@ -61,6 +60,9 @@ namespace PHANMEMTHI
             this.label3 = new System.Windows.Forms.Label();
             this.redobutton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbsubject = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btLoc = new Guna.UI2.WinForms.Guna2Button();
+            this.btboloc = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hombut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -119,11 +121,11 @@ namespace PHANMEMTHI
             this.studentbirthday.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.studentbirthday.AutoSize = true;
             this.studentbirthday.BackColor = System.Drawing.Color.Transparent;
-            this.studentbirthday.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentbirthday.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentbirthday.ForeColor = System.Drawing.Color.White;
-            this.studentbirthday.Location = new System.Drawing.Point(463, 55);
+            this.studentbirthday.Location = new System.Drawing.Point(578, 55);
             this.studentbirthday.Name = "studentbirthday";
-            this.studentbirthday.Size = new System.Drawing.Size(103, 22);
+            this.studentbirthday.Size = new System.Drawing.Size(99, 22);
             this.studentbirthday.TabIndex = 40;
             this.studentbirthday.Text = "Ngày sinh: ";
             // 
@@ -154,11 +156,11 @@ namespace PHANMEMTHI
             // 
             this.studentname.AutoSize = true;
             this.studentname.BackColor = System.Drawing.Color.Transparent;
-            this.studentname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentname.ForeColor = System.Drawing.Color.White;
             this.studentname.Location = new System.Drawing.Point(227, 55);
             this.studentname.Name = "studentname";
-            this.studentname.Size = new System.Drawing.Size(100, 22);
+            this.studentname.Size = new System.Drawing.Size(97, 22);
             this.studentname.TabIndex = 39;
             this.studentname.Text = "Họ và tên: ";
             // 
@@ -169,7 +171,7 @@ namespace PHANMEMTHI
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(353, 55);
+            this.label8.Location = new System.Drawing.Point(468, 55);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 23);
             this.label8.TabIndex = 37;
@@ -179,11 +181,11 @@ namespace PHANMEMTHI
             // 
             this.studentid.AutoSize = true;
             this.studentid.BackColor = System.Drawing.Color.Transparent;
-            this.studentid.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentid.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentid.ForeColor = System.Drawing.Color.White;
             this.studentid.Location = new System.Drawing.Point(244, 17);
             this.studentid.Name = "studentid";
-            this.studentid.Size = new System.Drawing.Size(127, 22);
+            this.studentid.Size = new System.Drawing.Size(123, 22);
             this.studentid.TabIndex = 38;
             this.studentid.Text = "Mã sinh viên: ";
             // 
@@ -205,24 +207,11 @@ namespace PHANMEMTHI
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(25, 149);
+            this.label2.Location = new System.Drawing.Point(28, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 26);
+            this.label2.Size = new System.Drawing.Size(153, 26);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Môn học";
-            // 
-            // lbsubject
-            // 
-            this.lbsubject.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbsubject.AutoSize = true;
-            this.lbsubject.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbsubject.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbsubject.Location = new System.Drawing.Point(26, 187);
-            this.lbsubject.Name = "lbsubject";
-            this.lbsubject.Size = new System.Drawing.Size(46, 22);
-            this.lbsubject.TabIndex = 2;
-            this.lbsubject.Text = "Môn";
-            this.lbsubject.Visible = false;
+            this.label2.Text = "Lớp học phần";
             // 
             // lborder
             // 
@@ -230,12 +219,11 @@ namespace PHANMEMTHI
             this.lborder.AutoSize = true;
             this.lborder.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lborder.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lborder.Location = new System.Drawing.Point(26, 275);
+            this.lborder.Location = new System.Drawing.Point(25, 310);
             this.lborder.Name = "lborder";
             this.lborder.Size = new System.Drawing.Size(70, 22);
             this.lborder.TabIndex = 4;
             this.lborder.Text = "Giữa kì";
-            this.lborder.Visible = false;
             // 
             // label5
             // 
@@ -243,7 +231,7 @@ namespace PHANMEMTHI
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label5.Location = new System.Drawing.Point(25, 237);
+            this.label5.Location = new System.Drawing.Point(24, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 26);
             this.label5.TabIndex = 3;
@@ -255,12 +243,11 @@ namespace PHANMEMTHI
             this.lbtime.AutoSize = true;
             this.lbtime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtime.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbtime.Location = new System.Drawing.Point(205, 277);
+            this.lbtime.Location = new System.Drawing.Point(204, 312);
             this.lbtime.Name = "lbtime";
             this.lbtime.Size = new System.Drawing.Size(69, 22);
             this.lbtime.TabIndex = 6;
             this.lbtime.Text = "40 phút";
-            this.lbtime.Visible = false;
             // 
             // label10
             // 
@@ -268,7 +255,7 @@ namespace PHANMEMTHI
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label10.Location = new System.Drawing.Point(204, 239);
+            this.label10.Location = new System.Drawing.Point(203, 274);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(110, 26);
             this.label10.TabIndex = 5;
@@ -280,12 +267,11 @@ namespace PHANMEMTHI
             this.lbstart.AutoSize = true;
             this.lbstart.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbstart.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbstart.Location = new System.Drawing.Point(28, 467);
+            this.lbstart.Location = new System.Drawing.Point(27, 502);
             this.lbstart.Name = "lbstart";
             this.lbstart.Size = new System.Drawing.Size(102, 22);
             this.lbstart.TabIndex = 8;
             this.lbstart.Text = "01/01/2020";
-            this.lbstart.Visible = false;
             // 
             // label12
             // 
@@ -293,7 +279,7 @@ namespace PHANMEMTHI
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label12.Location = new System.Drawing.Point(27, 429);
+            this.label12.Location = new System.Drawing.Point(26, 464);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(133, 26);
             this.label12.TabIndex = 7;
@@ -305,12 +291,11 @@ namespace PHANMEMTHI
             this.lbend.AutoSize = true;
             this.lbend.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbend.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbend.Location = new System.Drawing.Point(192, 469);
+            this.lbend.Location = new System.Drawing.Point(191, 504);
             this.lbend.Name = "lbend";
             this.lbend.Size = new System.Drawing.Size(102, 22);
             this.lbend.TabIndex = 10;
             this.lbend.Text = "01/01/2020";
-            this.lbend.Visible = false;
             // 
             // label14
             // 
@@ -318,7 +303,7 @@ namespace PHANMEMTHI
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label14.Location = new System.Drawing.Point(191, 431);
+            this.label14.Location = new System.Drawing.Point(190, 466);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(151, 26);
             this.label14.TabIndex = 9;
@@ -330,12 +315,11 @@ namespace PHANMEMTHI
             this.lblimit.AutoSize = true;
             this.lblimit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblimit.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lblimit.Location = new System.Drawing.Point(26, 375);
+            this.lblimit.Location = new System.Drawing.Point(25, 410);
             this.lblimit.Name = "lblimit";
             this.lblimit.Size = new System.Drawing.Size(65, 22);
             this.lblimit.TabIndex = 12;
             this.lblimit.Text = "0/3 lần";
-            this.lblimit.Visible = false;
             // 
             // label16
             // 
@@ -343,7 +327,7 @@ namespace PHANMEMTHI
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label16.Location = new System.Drawing.Point(25, 337);
+            this.label16.Location = new System.Drawing.Point(24, 372);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(166, 26);
             this.label16.TabIndex = 11;
@@ -421,12 +405,11 @@ namespace PHANMEMTHI
             this.lbnumber.AutoSize = true;
             this.lbnumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnumber.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lbnumber.Location = new System.Drawing.Point(205, 377);
+            this.lbnumber.Location = new System.Drawing.Point(204, 412);
             this.lbnumber.Name = "lbnumber";
             this.lbnumber.Size = new System.Drawing.Size(62, 22);
             this.lbnumber.TabIndex = 15;
             this.lbnumber.Text = "40 câu";
-            this.lbnumber.Visible = false;
             // 
             // label18
             // 
@@ -434,7 +417,7 @@ namespace PHANMEMTHI
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label18.Location = new System.Drawing.Point(204, 339);
+            this.label18.Location = new System.Drawing.Point(203, 374);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(79, 26);
             this.label18.TabIndex = 14;
@@ -455,7 +438,7 @@ namespace PHANMEMTHI
             // redobutton
             // 
             this.redobutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.redobutton.BorderRadius = 25;
+            this.redobutton.BorderRadius = 20;
             this.redobutton.CheckedState.Parent = this.redobutton;
             this.redobutton.CustomImages.Parent = this.redobutton;
             this.redobutton.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -484,11 +467,68 @@ namespace PHANMEMTHI
             this.guna2Panel1.Size = new System.Drawing.Size(719, 480);
             this.guna2Panel1.TabIndex = 46;
             // 
+            // lbsubject
+            // 
+            this.lbsubject.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbsubject.BackColor = System.Drawing.Color.Transparent;
+            this.lbsubject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.lbsubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lbsubject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lbsubject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lbsubject.FocusedState.Parent = this.lbsubject;
+            this.lbsubject.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.lbsubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.lbsubject.HoverState.Parent = this.lbsubject;
+            this.lbsubject.ItemHeight = 30;
+            this.lbsubject.ItemsAppearance.Parent = this.lbsubject;
+            this.lbsubject.Location = new System.Drawing.Point(30, 171);
+            this.lbsubject.Name = "lbsubject";
+            this.lbsubject.ShadowDecoration.Parent = this.lbsubject;
+            this.lbsubject.Size = new System.Drawing.Size(293, 36);
+            this.lbsubject.TabIndex = 47;
+            // 
+            // btLoc
+            // 
+            this.btLoc.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btLoc.BorderRadius = 15;
+            this.btLoc.CheckedState.Parent = this.btLoc;
+            this.btLoc.CustomImages.Parent = this.btLoc;
+            this.btLoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLoc.ForeColor = System.Drawing.Color.White;
+            this.btLoc.HoverState.Parent = this.btLoc;
+            this.btLoc.Location = new System.Drawing.Point(33, 225);
+            this.btLoc.Name = "btLoc";
+            this.btLoc.ShadowDecoration.Parent = this.btLoc;
+            this.btLoc.Size = new System.Drawing.Size(108, 29);
+            this.btLoc.TabIndex = 48;
+            this.btLoc.Text = "Lọc";
+            this.btLoc.Click += new System.EventHandler(this.btLoc_Click);
+            // 
+            // btboloc
+            // 
+            this.btboloc.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btboloc.BorderRadius = 15;
+            this.btboloc.CheckedState.Parent = this.btboloc;
+            this.btboloc.CustomImages.Parent = this.btboloc;
+            this.btboloc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btboloc.ForeColor = System.Drawing.Color.White;
+            this.btboloc.HoverState.Parent = this.btboloc;
+            this.btboloc.Location = new System.Drawing.Point(205, 225);
+            this.btboloc.Name = "btboloc";
+            this.btboloc.ShadowDecoration.Parent = this.btboloc;
+            this.btboloc.Size = new System.Drawing.Size(108, 29);
+            this.btboloc.TabIndex = 49;
+            this.btboloc.Text = "Bỏ lọc";
+            this.btboloc.Click += new System.EventHandler(this.btboloc_Click);
+            // 
             // Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 624);
+            this.Controls.Add(this.btboloc);
+            this.Controls.Add(this.btLoc);
+            this.Controls.Add(this.lbsubject);
             this.Controls.Add(this.redobutton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbnumber);
@@ -503,7 +543,6 @@ namespace PHANMEMTHI
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lborder);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lbsubject);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel1);
@@ -536,7 +575,6 @@ namespace PHANMEMTHI
         private System.Windows.Forms.Label studentid;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbsubject;
         private System.Windows.Forms.Label lborder;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbtime;
@@ -553,5 +591,8 @@ namespace PHANMEMTHI
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button redobutton;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2ComboBox lbsubject;
+        private Guna.UI2.WinForms.Guna2Button btLoc;
+        private Guna.UI2.WinForms.Guna2Button btboloc;
     }
 }

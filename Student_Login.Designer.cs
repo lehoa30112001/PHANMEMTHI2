@@ -53,6 +53,8 @@ namespace PHANMEMTHI
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel1.Controls.Add(this.logoutbutton);
@@ -72,6 +74,7 @@ namespace PHANMEMTHI
             // 
             // logoutbutton
             // 
+            this.logoutbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logoutbutton.AutoSize = true;
             this.logoutbutton.BackColor = System.Drawing.Color.Transparent;
             this.logoutbutton.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
@@ -85,6 +88,7 @@ namespace PHANMEMTHI
             // 
             // logoutsymbol
             // 
+            this.logoutsymbol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logoutsymbol.Image = ((System.Drawing.Image)(resources.GetObject("logoutsymbol.Image")));
             this.logoutsymbol.Location = new System.Drawing.Point(634, 44);
             this.logoutsymbol.Name = "logoutsymbol";
@@ -108,11 +112,12 @@ namespace PHANMEMTHI
             // 
             // studentbirthday
             // 
+            this.studentbirthday.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.studentbirthday.AutoSize = true;
             this.studentbirthday.BackColor = System.Drawing.Color.Transparent;
             this.studentbirthday.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentbirthday.ForeColor = System.Drawing.Color.White;
-            this.studentbirthday.Location = new System.Drawing.Point(455, 68);
+            this.studentbirthday.Location = new System.Drawing.Point(487, 68);
             this.studentbirthday.Name = "studentbirthday";
             this.studentbirthday.Size = new System.Drawing.Size(103, 22);
             this.studentbirthday.TabIndex = 34;
@@ -168,11 +173,12 @@ namespace PHANMEMTHI
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(345, 68);
+            this.label8.Location = new System.Drawing.Point(377, 68);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 23);
             this.label8.TabIndex = 24;
@@ -180,6 +186,7 @@ namespace PHANMEMTHI
             // 
             // dotest
             // 
+            this.dotest.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dotest.Image = ((System.Drawing.Image)(resources.GetObject("dotest.Image")));
             this.dotest.Location = new System.Drawing.Point(217, 195);
             this.dotest.Name = "dotest";
@@ -192,6 +199,7 @@ namespace PHANMEMTHI
             // 
             // testresult
             // 
+            this.testresult.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.testresult.Image = ((System.Drawing.Image)(resources.GetObject("testresult.Image")));
             this.testresult.Location = new System.Drawing.Point(479, 195);
             this.testresult.Name = "testresult";
@@ -204,6 +212,7 @@ namespace PHANMEMTHI
             // 
             // lbdotest
             // 
+            this.lbdotest.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbdotest.AutoSize = true;
             this.lbdotest.BackColor = System.Drawing.Color.Transparent;
             this.lbdotest.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -217,6 +226,7 @@ namespace PHANMEMTHI
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,6 +251,7 @@ namespace PHANMEMTHI
             this.Name = "Student_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student_Login";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutsymbol)).EndInit();

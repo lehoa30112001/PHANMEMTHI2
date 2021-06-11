@@ -81,6 +81,7 @@ namespace PHANMEMTHI
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -273,7 +274,6 @@ namespace PHANMEMTHI
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderColor = System.Drawing.Color.CornflowerBlue;
             this.guna2Panel1.BorderRadius = 30;
-            this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.guna2Panel1.BorderThickness = 3;
             this.guna2Panel1.Controls.Add(this.btnext);
             this.guna2Panel1.Controls.Add(this.btback);
@@ -284,6 +284,7 @@ namespace PHANMEMTHI
             this.guna2Panel1.Controls.Add(this.lbquestion);
             this.guna2Panel1.Controls.Add(this.causo);
             this.guna2Panel1.Controls.Add(this.elaptime);
+            this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Location = new System.Drawing.Point(13, 132);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
@@ -330,9 +331,10 @@ namespace PHANMEMTHI
             this.answer4.AutoSize = true;
             this.answer4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer4.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.answer4.Location = new System.Drawing.Point(105, 324);
+            this.answer4.Location = new System.Drawing.Point(56, 359);
             this.answer4.Name = "answer4";
-            this.answer4.Size = new System.Drawing.Size(128, 25);
+            this.answer4.Padding = new System.Windows.Forms.Padding(0, 0, 400, 0);
+            this.answer4.Size = new System.Drawing.Size(528, 25);
             this.answer4.TabIndex = 14;
             this.answer4.TabStop = true;
             this.answer4.Text = "radioButton3";
@@ -345,9 +347,10 @@ namespace PHANMEMTHI
             this.answer3.AutoSize = true;
             this.answer3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.answer3.Location = new System.Drawing.Point(105, 255);
+            this.answer3.Location = new System.Drawing.Point(56, 290);
             this.answer3.Name = "answer3";
-            this.answer3.Size = new System.Drawing.Size(128, 25);
+            this.answer3.Padding = new System.Windows.Forms.Padding(0, 0, 400, 0);
+            this.answer3.Size = new System.Drawing.Size(528, 25);
             this.answer3.TabIndex = 13;
             this.answer3.TabStop = true;
             this.answer3.Text = "radioButton2";
@@ -360,9 +363,10 @@ namespace PHANMEMTHI
             this.answer2.AutoSize = true;
             this.answer2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.answer2.Location = new System.Drawing.Point(105, 186);
+            this.answer2.Location = new System.Drawing.Point(56, 221);
             this.answer2.Name = "answer2";
-            this.answer2.Size = new System.Drawing.Size(128, 25);
+            this.answer2.Padding = new System.Windows.Forms.Padding(0, 0, 400, 0);
+            this.answer2.Size = new System.Drawing.Size(528, 25);
             this.answer2.TabIndex = 12;
             this.answer2.TabStop = true;
             this.answer2.Text = "radioButton1";
@@ -375,9 +379,10 @@ namespace PHANMEMTHI
             this.answer1.AutoSize = true;
             this.answer1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.answer1.Location = new System.Drawing.Point(105, 117);
+            this.answer1.Location = new System.Drawing.Point(56, 152);
             this.answer1.Name = "answer1";
-            this.answer1.Size = new System.Drawing.Size(128, 25);
+            this.answer1.Padding = new System.Windows.Forms.Padding(0, 0, 400, 0);
+            this.answer1.Size = new System.Drawing.Size(528, 25);
             this.answer1.TabIndex = 11;
             this.answer1.TabStop = true;
             this.answer1.Text = "radioButton1";
@@ -392,7 +397,8 @@ namespace PHANMEMTHI
             this.lbquestion.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.lbquestion.Location = new System.Drawing.Point(126, 63);
             this.lbquestion.Name = "lbquestion";
-            this.lbquestion.Size = new System.Drawing.Size(71, 22);
+            this.lbquestion.Padding = new System.Windows.Forms.Padding(0, 0, 450, 0);
+            this.lbquestion.Size = new System.Drawing.Size(521, 22);
             this.lbquestion.TabIndex = 8;
             this.lbquestion.Text = "Câu hỏi";
             // 
@@ -829,6 +835,14 @@ namespace PHANMEMTHI
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Location = new System.Drawing.Point(48, 50);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(632, 80);
+            this.guna2Panel2.TabIndex = 17;
+            // 
             // Do_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -837,6 +851,8 @@ namespace PHANMEMTHI
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Do_Test";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Do_Test";
@@ -905,5 +921,6 @@ namespace PHANMEMTHI
         private Guna.UI2.WinForms.Guna2Button btnext;
         private Guna.UI2.WinForms.Guna2Button btback;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }

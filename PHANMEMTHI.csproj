@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
@@ -57,6 +60,12 @@
     </Compile>
     <Compile Include="Ketquathi\Class_Exam_Info.Designer.cs">
       <DependentUpon>Class_Exam_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KQthi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KQthi.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Lambaithi\Do_Test.cs">
       <SubType>Form</SubType>
@@ -117,6 +126,10 @@
     <EmbeddedResource Include="Ketquathi\Class_Exam_Info.resx">
       <DependentUpon>Class_Exam_Info.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KQthi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>KQthi.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lambaithi\Do_Test.resx">
       <DependentUpon>Do_Test.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +188,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
